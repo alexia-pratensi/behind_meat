@@ -1,12 +1,68 @@
+// IMPORT FONTS
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: absolute;
+  width: 100vw;
+  height: 58px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(93.22deg, #FF3E6A 0.53%, #FAAD81 100%);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.apropos p{
+position: absolute;
+width: 220px;
+height: 55px;
+left: 1073px;
+top: 3px;
+
+font-family: 'Epilogue', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFF2EF;
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+.project-title {
+position: absolute;
+width: 317px;
+height: 79px;
+left: 178px;
+top: 10%;
+
+font-family: 'Pacifico', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 40px;
+/* or 154% */
+
+display: flex;
+align-items: center;
+color: #FFFFFF;
+}
+
+.logo {
+position: absolute;
+width: 88.47px !important
+;
+height: 77px;
+left: 68px;
+top: 19px;
 }
