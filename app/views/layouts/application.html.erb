@@ -8,14 +8,26 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
+<<<<<<< HEAD
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
     <%= yield %>
     <%# si homepage applique le footer ci-desous %>
     <%= render "shared/footer_homepage" %>
     <%# sinon applique le footer bleu (fait par Morgane) %>
+=======
+    <%= render "shared/flashes" %>
+    <%= render "shared/navbar" %>
+    <div class="container main-container">
+      <%= yield %>
+    </div>
+    <%# <%= render "shared/blue_footer" %>
+>>>>>>> eb09b25608b74bc2058d7ba083f07a14edde5605
   </body>
 </html>

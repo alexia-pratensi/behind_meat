@@ -1,12 +1,50 @@
+// IMPORT FONTS
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(93.22deg, #FF3E6A 0.53%, #FAAD81 100%);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.text-navbar {
+font-family: 'Epilogue', sans-serif;
+font-weight: 700;
+font-size: 16px;
+color: #FFF2EF;
+text-decoration: none;
+margin-block-start: 0;
+margin-block-end: 0;
+}
+.cursor {
+  cursor:pointer;
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+.title {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 40px;
+  color: #FFFFFF;
+  margin: 0px;
+  margin-left: 12px;
+  margin-top: 14px;
+}
+
+.logo {
+  width: 88.47px !important;
+  height: 77px;
+  margin-top: 50px;
+  margin-left: 100px;
 }
