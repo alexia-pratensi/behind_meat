@@ -1,0 +1,24 @@
+
+.footer-vert {
+height: 162px;
+width: 100%;
+background: #1C8D8D;
+display: flex;
+flex-direction: column;
+justify-content: center;
+position: absolute;
+top:100%;
+}
+
+.text-footer {
+  color: white;
+  margin-left: 100px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.herbe {
+  height: 66px;
+  background-image: url('../../images/herbe.png');
+  background-repeat: repeat-x;
+}
