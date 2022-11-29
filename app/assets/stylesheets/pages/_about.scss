@@ -2,42 +2,53 @@
   display: flex;
   justify-content: center;
   color: #C65759;
+  font-family: 'Epilogue', sans-serif;
+  background-color: wheat;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
 }
 
 .about-details {
+  font-family: 'Epilogue', sans-serif;
+  // margin: 50px;
 h2 {
   color: #C65759;
 }
 p{
   color: #362828;
 }
-// display: flex;
 }
 
 .about-qui {
-  display: flex;
   align-items: center;
   justify-content: left;
   margin-bottom: 50px;
+  text-align: left;
+  margin-top: 50px;
+  text-justify: left;
 }
 
 .about-projet {
-  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  text-align: right;
+  text-justify: right;
 }
 
 .about-source {
-  display: flex;
   align-items: center;
   justify-content: right;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  text-align: left;
+  text-justify: left;
 }
 
 .btn-about {
-  position: absolute;
+  margin:auto;
+  margin-top: 50px;
   width: 220px;
   height: 55px;
-  left: 607px;
-  top: 80vh;
 }
