@@ -1,0 +1,43 @@
+.about-equipe {
+  display: flex;
+  justify-content: center;
+  color: #C65759;
+}
+
+.about-details {
+h2 {
+  color: #C65759;
+}
+p{
+  color: #362828;
+}
+// display: flex;
+}
+
+.about-qui {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 50px;
+}
+
+.about-projet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.about-source {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.btn-about {
+  position: absolute;
+  width: 220px;
+  height: 55px;
+  left: 607px;
+  top: 80vh;
+}
