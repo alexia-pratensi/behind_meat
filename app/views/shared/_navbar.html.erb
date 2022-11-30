@@ -15,12 +15,12 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to "A propos", "/", class: "nav-link text-navbar me-4" %>
+            <%= link_to "A propos", apropos_path, class: "nav-link text-navbar me-4" %>
           </li>
           <li class="nav-item dropdown">
             <div class='d-flex align-items-center'>
               <%= image_tag "user.png", class: "dropdown-toggle cursor", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <p class='text-navbar ms-2 me-3'>Nom user</p>
+              <p class='text-navbar ms-2 me-3'><%=current_user.name%></p>
             </div>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Mon suivi", dashboard_path, class: "dropdown-item" %>
@@ -29,7 +29,7 @@
           </li>
         <% else %>
          <li class="nav-item">
-            <%= link_to "A propos", "/", class: "nav-link text-navbar me-4" %>
+            <%= link_to "A propos", apropos_path, class: "nav-link text-navbar me-4" %>
           </li>
           <li class="nav-item d-flex align-items-center">
             <%= image_tag "user.png"%>
