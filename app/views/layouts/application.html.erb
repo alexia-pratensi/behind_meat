@@ -19,17 +19,18 @@
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
 
-    <div class="container main-container">
+    <div class="container main-container ">
       <%= yield %>
     </div>
 
 
 
-    <% if current_page?(controller: 'pages', action: 'home') || current_page?(controller: 'pages', action: 'about') %>
-      <%= render "shared/footer_homepage"%>
-    <%else%>
-       <%= render "shared/blue_footer" %>
-    <%end %>
+    <%# <% if current_page?(controller: 'pages', action: 'home') || current_page?(controller: 'pages', action: 'about') %>
+      <%#
+    <%# <%else%>
+       <%# <%= render "shared/blue_footer" %>
+    <%# <%end %>
+    <%= render "shared/footer_homepage"%>
 
   </body>
 </html>

@@ -49,6 +49,40 @@
 .cochon {
   width: 148.22px;
   height: 106.61px;
-  margin-left: 150px;
+  margin-left: 120px;
   margin-top: -80px;
+}
+.white-button-homepage {
+  border: 1px solid #FF6769;
+  border-radius: 16px;
+  font-family: 'Epilogue', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #FF6769 !important;
+  text-decoration: none;
+  padding: 15px 20px;
+
+}
+.pink-button-homepage {
+  background: linear-gradient(93.22deg, #FF6769 0.53%, #FF6769 0.54%, #FB7550 100%);
+  border-radius: 16px;
+  font-family: 'Epilogue', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #FFF2EF !important;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-right: 10px;
 }
