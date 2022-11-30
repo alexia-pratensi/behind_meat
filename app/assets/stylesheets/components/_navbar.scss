@@ -4,33 +4,25 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
-  position: absolute;
-  width: 100vw;
-  height: 58px;
-  left: 0px;
+  position: fixed;
   top: 0px;
+  width: 100%;
+  height: 60px;
   background: linear-gradient(93.22deg, #FF3E6A 0.53%, #FAAD81 100%);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.apropos p{
-position: absolute;
-width: 220px;
-height: 55px;
-left: 1073px;
-top: 3px;
-
+.text-navbar {
 font-family: 'Epilogue', sans-serif;
-font-style: normal;
 font-weight: 700;
 font-size: 16px;
-line-height: 21px;
-display: flex;
-align-items: center;
-text-align: center;
-
 color: #FFF2EF;
+text-decoration: none;
+margin-block-start: 0;
+margin-block-end: 0;
+}
+.cursor {
+  cursor:pointer;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -39,30 +31,20 @@ color: #FFF2EF;
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-.project-title {
-position: absolute;
-width: 317px;
-height: 79px;
-left: 178px;
-top: 10%;
-
-font-family: 'Pacifico', cursive;
-font-style: normal;
-font-weight: 400;
-font-size: 26px;
-line-height: 40px;
-/* or 154% */
-
-display: flex;
-align-items: center;
-color: #FFFFFF;
+.title {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 40px;
+  color: #FFFFFF;
+  margin: 0px;
+  margin-left: 12px;
+  margin-top: 14px;
 }
 
 .logo {
-position: absolute;
-width: 88.47px !important
-;
-height: 77px;
-left: 68px;
-top: 19px;
+  width: 88.47px !important;
+  height: 77px;
+  margin-top: 50px;
+  margin-left: 100px;
 }

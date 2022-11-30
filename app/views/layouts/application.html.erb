@@ -13,11 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
 
-  <body><%= render "shared/navbar" %>
+  <body>
     <%= render "shared/flashes" %>
     <%= render "shared/navbar" %>
-    <div class="container main-container"><%= yield %>
+    <div class="container main-container">
+      <%= yield %>
     </div>
-    <%= render "shared/blue_footer" %>
+    <%# <%= render "shared/blue_footer" %>
   </body>
 </html>
