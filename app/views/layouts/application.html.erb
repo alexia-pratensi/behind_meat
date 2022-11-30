@@ -21,11 +21,10 @@
       <%= yield %>
     </div>
 
-    <% if current_page?(action: 'home') || current_page?(action: 'about') %>
-      <%= render "shared/footer_homepage" %>
-    <%else%>
-      <%= render "shared/blue_footer" %>
-    <%end%>
+    <%# <% if current_page?(action: 'home') || current_page?(action: 'about') %>
+      <%# <%= render "shared/footer_homepage" %>
+    <%# <%else%>
+      <%# <%= render "shared/blue_footer" %>
 
   </body>
 </html>
