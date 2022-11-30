@@ -1,48 +1,81 @@
 
-
-<div class='container dashboard-container'>
 <br>
   <h1>Bonjour {name},</h1>
 
-  <div>
-    <h2 class='day-conso'>Ma dernière consommation</h2>
+<div class='container dashboard-container'>
+
+<!-- Conso générale Div 1 -->
+
+<div class='recap-conso'>
+  <div class='day-conso'>
+    <h2 class='title-conso'>Ma dernière consommation</h2>
   </div>
 
-  <div class='row dashboard-row'>
-    <h2 class='global-conso'>L'impact global de ma consommation</h2>
-      <div class='card card-dashboard'>
-        <p class='dash-card'>Consommation d'eau</p>
-      </div>
+  <div class='dashboard-row'>
+      <h2 class='title-conso-globale'>L'impact global de ma consommation</h2>
+        <div class='grid-conso'>
+          <div class='card card-dashboard'>
+            <div class='dash-card-text'>
+              <i class="fa-solid fa-droplet"></i>
+              <p>Consommation d'eau</p>
+              <p> ??? Litres</p>
+            </div>
+          </div>
 
-      <div class='card card-dashboard'>
-        <p class='dash-card'>Emission carbone</p>
-      </div>
+          <div class='card card-dashboard'>
+            <div class='dash-card-text'>
+              <i class="fa-solid fa-cloud"></i>
+              <p>Emission carbone</p>
+              <p> ??? Co2</p>
+            </div>
+          </div>
 
-      <div class='card card-dashboard'>
-        <p class='dash-card'>Déforestation</p>
-      </div>
+          <div class='card card-dashboard'>
+            <div class='dash-card-text'>
+              <i class="fa-solid fa-tree"></i>
+              <p>Déforestation</p>
+              <p> ??? arbres</p>
+            </div>
+          </div>
 
-      <div class='card card-dashboard'>
-        <p class='dash-card'>Souffrance animale</p>
-      </div>
+          <div class='card card-dashboard'>
+            <div class='dash-card-text'>
+              <i class="fa-solid fa-cow"></i>
+              <p>Souffrance animale</p>
+              <p> ??? animaux tués</p>
+            </div>
+          </div>
+        </div>
   </div>
+</div>
 
-  <div>
+<!-- Conso sur 7 jours - Div 2 -->
+
+  <div class='conso-sept'>
     <h3 class='week-conso'>Ma consommation sur 7 jours</h3>
   </div>
 
-  <div>
-    <h3 class='api-marmiton'>Idées recettes</h3>
-    <h4>Marmiton</h4>
+<!-- APIs -->
+
+  <div class='dashboard-apis'>
+    <div class='dash-api'>
+      <div class='api-title'>
+        <h3 class='dashboard-recettes'>Idées recettes</h3>
+        <h4>Marmiton</h4>
+      </div>
+    </div>
+
+    <div class='dash-api'>
+      <div class='api-title'>
+      <h3 class='dashboard-tweets'>Ceci pourrait vous intéresser</h3>
+        <h4>Twitter</h4>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <h3 class='api-twitter'>Ceci pourrait vous intéresser</h3>
-    <h4>Twitter</h4>
-  </div>
+<!-- Cards associations -->
 
-  <div>
+  <div class='cards-associations'>
     <h3 class='dashboard-assos'>Associations</h3>
   </div>
-
 </div>
