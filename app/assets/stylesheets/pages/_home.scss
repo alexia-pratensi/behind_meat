@@ -1,1 +1,54 @@
-// Specific CSS for your home-page
+.main-container-homepage{
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  background: url('https://res.cloudinary.com/dwvsbgwap/image/upload/v1669819633/image_homepage_rogn%C3%A9e_clzb6r.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  margin-bottom: -35px;
+}
+.content-wrapper-homepage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  //rajout
+  margin-bottom: 170px;
+}
+.text-homepage{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.text-homepage > h2 {
+  color: #C65759;
+  font-family: 'Epilogue', sans-serif;
+}
+.buttons-homepage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  a {
+      margin: 10px !important;
+  }
+}
+.cochon-btn {
+  display: flex;
+  flex-direction: column;
+}
+.cochon {
+  width: 148.22px;
+  height: 106.61px;
+  margin-left: 150px;
+  margin-top: -80px;
+}
