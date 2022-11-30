@@ -1,128 +1,146 @@
-// Recap de la dernière conso- Div 1
+.dashboard-container {
+  margin-top: 58px;
+  min-height: calc(100vh - 116px);
+  max-width: 1600px;
 
-.recap-conso {
-  display: flex;
-  margin-left: 10px;
-  .day-conso {
-    .title-conso {
-      width: 500px;
+  // Recap de la dernière conso- Div 1
+
+  .recap-conso {
+    display: flex;
+    // margin-left: 10px;
+    margin-bottom: 20px;
+    height: 600px;
+    width: 100%;
+    .day-conso {
+      border-right: 2px solid #C65759;
+      height: 350px;
+      .btn-dashboard-pink {
+        margin-top: 50px;
+        width: 220px;
+        height: 40px;
+      }
+      .title-conso {
+        width: 500px;
+        height: 45px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 65px;
+        padding-left: 20px;
+        color: #C65759;
+      }
+    }
+  }
+
+  // Cumul impact global de la conso - Div 1
+
+  .dashboard-row {
+    margin-left: 100px;
+    .title-conso-globale {
+      width: 600px;
       height: 60px;
       font-family: 'DM Sans';
       font-style: normal;
       font-weight: 700;
       font-size: 30px;
       line-height: 40px;
-      padding-left: 20px;
+      padding-left: 0px;
       color: #C65759;
+      display: flex;
+      align-items: center;
     }
   }
-}
 
-// Cumul impact global de la conso - Div 1
+  .grid-conso {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    // Cards de la conso globale - Div 1
 
-.dashboard-row {
-  .title-conso-globale {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 40px;
-    display: flex;
-    align-items: center;
-    color: #C65759;
-    .grid-conso {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 16px;
-      // Cards de la conso globale - Div 1
-
-      .card-dashbord {
+    .card-dashboard {
       box-shadow: 0px 4px 50px rgba(224, 224, 224, 0.25);
-      border-radius: 15px;
+      border-radius: 10px;
       justify-content: center;
       border: none;
       background-color: white;
-      position: relative;
-      margin: 20px;
+      margin: 2px;
       display: flex;
       &:hover{
-      box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
       }
       .dash-card-text > p {
-      margin-left: 5%;
-      padding: 2%;
-      text-align: center;
-      }
+        margin-left: 5%;
+        padding: 2%;
+        text-align: center;
+        height: 60px;
       }
     }
   }
-}
 
+  // Conso sur 7 jours - Div 2
 
-// Conso sur 7 jours - Div 2
-
-.conso-sept {
-  .week-conso {
-    width: 631px;
-    height: 58px;
-    left: 92px;
-    top: 650px;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 40px;
-    display: flex;
-    align-items: center;
-    color: #C65759;
-  }
-}
-
-// Partie APIs - Div 3
-
-.dashboard-apis {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
-  width: 90%;
-  height: 680px;
-  border-radius: 4px;
-  position: absolute;
-  top: 1000px;
-  left: 100px;
-  .dash-api {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 40px;
-    display: flex;
-    text-align: center;
-    color: #C65759;
-    .api-title {
-      justify-content: center;
-      text-align: center;
+  .conso-sept {
+    .week-conso {
+      width: 631px;
+      height: 58px;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+      display: flex;
+      align-items: center;
+      color: #C65759;
     }
   }
-}
+
+  // Partie APIs - Div 3
+
+  .dashboard-apis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    width: 90%;
+    height: 680px;
+    border-radius: 4px;
+    position: absolute;
+    top: 1000px;
+    left: 100px;
+    .dash-api {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 40px;
+      display: flex;
+      text-align: center;
+      color: #C65759;
+      .api-title {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
 
 
-// Partie Associations - Div 4
+  // Partie Associations - Div 4
 
-.cards-associations {
-  .dashboard-assos {
-    width: 419px;
-    height: 58px;
-    left: 76px;
-    top: 1700px;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 40px;
-    display: flex;
-    align-items: center;
-    color: #C65759;
+  .cards-associations {
+    .dashboard-assos {
+      width: 419px;
+      height: 58px;
+      left: 76px;
+      top: 1700px;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 40px;
+      display: flex;
+      align-items: center;
+      color: #C65759;
+    }
   }
 }
 

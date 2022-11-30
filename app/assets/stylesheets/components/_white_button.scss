@@ -1,0 +1,18 @@
+.white_button {
+  border-radius: 16px;
+  font-family: 'Epilogue', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #FFF2EF !important;
+  text-decoration: none;
+  &:hover {
+    background: linear-gradient(93.22deg, #FF6769 0.53%, #FF6769 0.54%, #FB7550 100%);
+
+  }
+  }
