@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
+    <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
   </head>
 
   <body>
@@ -22,11 +24,12 @@
     </div>
 
 
+
     <% if current_page?(controller: 'pages', action: 'home') || current_page?(controller: 'pages', action: 'about') %>
       <%= render "shared/footer_homepage" %>
     <%else%>
       <%= render "shared/blue_footer" %>
-    <%end%>
+   <%end%>
 
   </body>
 </html>

@@ -1,14 +1,21 @@
 
-<br>
-  <h1>Bonjour {name},</h1>
 
-<div class='container dashboard-container'>
+<div class='dashboard-container'>
+<br>
+  <h1><b>Bonjour <%=current_user.name%>,</b></h1>
 
 <!-- Conso générale Div 1 -->
 
 <div class='recap-conso'>
   <div class='day-conso'>
     <h2 class='title-conso'>Ma dernière consommation</h2>
+    <canvas id="myChart"></canvas>
+<%# <canvas id="myChart" data-meats=<%= @meats.pluck(:name) data-consos = @consos %>
+<%# </canvas> %>
+    <div class='dashboard-buttons'>
+      <a class="pink_button btn-dashboard-pink" href="#">Mon suivi</a>
+      <a class="white_button btn-dashboard-pink" href="#">Modifier</a>
+    </div>
   </div>
 
   <div class='dashboard-row'>
@@ -17,7 +24,7 @@
           <div class='card card-dashboard'>
             <div class='dash-card-text'>
               <i class="fa-solid fa-droplet"></i>
-              <p>Consommation d'eau</p>
+              <p><b>Consommation d'eau</b></p>
               <p> ??? Litres</p>
             </div>
           </div>
@@ -25,7 +32,7 @@
           <div class='card card-dashboard'>
             <div class='dash-card-text'>
               <i class="fa-solid fa-cloud"></i>
-              <p>Emission carbone</p>
+              <p><b>Emission carbone</b></p>
               <p> ??? Co2</p>
             </div>
           </div>
@@ -33,7 +40,7 @@
           <div class='card card-dashboard'>
             <div class='dash-card-text'>
               <i class="fa-solid fa-tree"></i>
-              <p>Déforestation</p>
+              <p><b>Déforestation</b></p>
               <p> ??? arbres</p>
             </div>
           </div>
@@ -41,7 +48,7 @@
           <div class='card card-dashboard'>
             <div class='dash-card-text'>
               <i class="fa-solid fa-cow"></i>
-              <p>Souffrance animale</p>
+              <p><b>Souffrance animale</b></p>
               <p> ??? animaux tués</p>
             </div>
           </div>
@@ -75,7 +82,23 @@
 
 <!-- Cards associations -->
 
-  <div class='cards-associations'>
     <h3 class='dashboard-assos'>Associations</h3>
+  <div class='cards-associations'>
+    <% @assos.each do |asso| %>
+      <div class="card">
+            <div class="image-container image-container-asso">
+              <% if asso.photo.attached? %>
+              <%= cl_image_tag asso.photo.key, crop: :fill, class:'image-card image-card-asso' %>
+              <% else %>
+              <%= image_tag "images/logo.png", alt: "associations" %>
+              <% end %>
+              <h5 class="card-title"><%= asso.name%></h5>
+              <p class="card-text"><%= asso.description%></p>
+            </div>
+              <a href="<%= asso.url%>" target="_blank" class="btn btn-dashboard-pink pink_button"></a>
+            <%# <div class="card-body">
+            </div> %>
+        </div>
+    <% end %>
   </div>
 </div>
