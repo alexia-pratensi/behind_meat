@@ -26,10 +26,10 @@
 
 
     <% if current_page?(controller: 'pages', action: 'home') || current_page?(controller: 'pages', action: 'about') %>
-      <%= render "shared/footer_homepage" %>
+      <%= render "shared/footer_homepage"%>
     <%else%>
-      <%= render "shared/blue_footer" %>
-   <%end%>
+       <%= render "shared/blue_footer" %>
+    <%end %>
 
   </body>
 </html>
