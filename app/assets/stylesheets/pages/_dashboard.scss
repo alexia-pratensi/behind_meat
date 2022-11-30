@@ -123,29 +123,61 @@
     }
   }
 
-
   // Partie Associations - Div 4
 
-  .cards-associations {
-    .dashboard-assos {
-      width: 419px;
-      height: 58px;
-      left: 76px;
-      top: 1700px;
-      font-family: 'DM Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 30px;
-      line-height: 40px;
-      display: flex;
-      align-items: center;
-      color: #C65759;
+  .card-product {
+    overflow: hidden;
+    height: 120px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+
+    .image-card-asso {
+      height: 100%;
+      width: 120px;
+      // object-fit: cover;
     }
   }
+
+  .cards-associations {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px;
+      align-items: center;
+
+}
 }
 
-.image-card-asso {
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-}
+
+//     .card-dashboard-assos {
+//       width: 419px;
+//       height: 58px;
+//       font-family: 'DM Sans';
+//       font-style: normal;
+//       font-weight: 400;
+//       font-size: 30px;
+//       line-height: 40px;
+//       display: flex;
+//       align-items: center;
+//       color: #C65759;
+//       .image-container-asso {
+//         align-items: center;
+//       }
+
+//       .card-body {
+//         align-items: center;
+//       }
+//       // justify-content: space-between;
+//       // align-items: center;
+//     }
+//   }
+// }
+
+// // .cards-assos-dashboard {
+// //   display: grid;
+// //   grid-template-columns: 1fr 1fr 1fr;
+// //   grid-gap: 30px;
+// //   margin-left: 70px;
+// //   margin-bottom: 40px;
+// // }
