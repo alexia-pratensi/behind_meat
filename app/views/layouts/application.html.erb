@@ -14,11 +14,18 @@
   </head>
 
   <body>
-    <%= render "shared/flashes" %>
     <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
+
     <div class="container main-container">
       <%= yield %>
     </div>
-    <%= render "shared/blue_footer" %>
+
+    <% if current_page?(action: 'home') || current_page?(action: 'about') %>
+      <%= render "shared/footer_homepage" %>
+    <%else%>
+      <%= render "shared/blue_footer" %>
+    <%end%>
+
   </body>
 </html>
