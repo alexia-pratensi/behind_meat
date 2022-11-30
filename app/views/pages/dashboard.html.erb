@@ -82,5 +82,21 @@
 
   <div class='cards-associations'>
     <h3 class='dashboard-assos'>Associations</h3>
+    <% @assos.each do |asso| %>
+      <div class="card" style="width: 18rem;">
+            <div class="image-container image-container-asso">
+              <% if asso.photo.attached? %>
+              <%= cl_image_tag asso.photo.key, crop: :fill, class:'image-card image-card-asso' %>
+              <% else %>
+              <%= image_tag "images/logo.png", alt: "associations" %>
+              <% end %>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><%= asso.name%></h5>
+              <p class="card-text"><%= asso.description%></p>
+              <a href="#" class="btn btn-primary"><%= asso.url%></a>
+            </div>
+        </div>
+    <% end %>
   </div>
 </div>
