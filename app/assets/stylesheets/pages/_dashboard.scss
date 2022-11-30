@@ -1,157 +1,127 @@
-.global-conso {
-  position: absolute;
-  width: 513px;
-  height: 58px;
-  left: 120px;
-  top: 223px;
+// Recap de la dernière conso- Div 1
 
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 40px;
-  /* or 133% */
-
+.recap-conso {
   display: flex;
-  align-items: center;
-
-  color: #C65759;
-}
-
-.day-conso {
-  position: absolute;
-  width: 513px;
-  height: 58px;
-  left: 92px;
-  top: 223px;
-
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 40px;
-  /* or 133% */
-
-  display: flex;
-  align-items: center;
-
-  color: #C65759;
-}
-
-.dashboard-col {
-  position: absolute;
-  width: 301px;
-  height: 213px;
-  left: 747px;
-  top: 300px;
-}
-
-.card-dashbord {
-  box-shadow: 0px 4px 50px rgba(224, 224, 224, 0.25);
-  border-radius: 10px;
-  justify-content: center;
-  border: none;
-  height: 250px;
-  width: 250px;
-  background-color: white;
-  position: relative;
-  margin: 20px;
-
-  &:hover{
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  margin-left: 10px;
+  .day-conso {
+    .title-conso {
+      width: 500px;
+      height: 60px;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+      padding-left: 20px;
+      color: #C65759;
+    }
   }
 }
 
+// Cumul impact global de la conso - Div 1
+
 .dashboard-row {
+  .title-conso-globale {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #C65759;
+    .grid-conso {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 16px;
+      // Cards de la conso globale - Div 1
+
+      .card-dashbord {
+      box-shadow: 0px 4px 50px rgba(224, 224, 224, 0.25);
+      border-radius: 15px;
+      justify-content: center;
+      border: none;
+      background-color: white;
+      position: relative;
+      margin: 20px;
+      display: flex;
+      &:hover{
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+      }
+      .dash-card-text > p {
+      margin-left: 5%;
+      padding: 2%;
+      text-align: center;
+      }
+      }
+    }
+  }
+}
+
+
+// Conso sur 7 jours - Div 2
+
+.conso-sept {
+  .week-conso {
+    width: 631px;
+    height: 58px;
+    left: 92px;
+    top: 650px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #C65759;
+  }
+}
+
+// Partie APIs - Div 3
+
+.dashboard-apis {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
-  width: 40%;
-  height: 200px;
-  border-radius: 6px;
+  width: 90%;
+  height: 680px;
+  border-radius: 4px;
   position: absolute;
-  top: 400px;
-  left: 700px;
-}
-
-.week-conso {
-  position: absolute;
-  width: 631px;
-  height: 58px;
-  left: 87px;
-  top: 800px;
-
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 40px;
-  /* or 133% */
-
-  display: flex;
-  align-items: center;
-
-  color: #C65759;
-}
-
-.api-marmiton {
-  position: absolute;
-  width: 419px;
-  height: 58px;
-  left: 150px;
   top: 1000px;
-
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 40px;
-  /* or 133% */
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #C65759;
+  left: 100px;
+  .dash-api {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    display: flex;
+    text-align: center;
+    color: #C65759;
+    .api-title {
+      justify-content: center;
+      text-align: center;
+    }
+  }
 }
 
-.api-twitter {
-  position: absolute;
-  width: 419px;
-  height: 58px;
-  left: 800px;
-  top: 1000px;
 
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 40px;
-  /* or 133% */
+// Partie Associations - Div 4
 
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #C65759;
-}
-
-.dashboard-assos {
-  position: absolute;
-  width: 419px;
-  height: 58px;
-  left: 76px;
-  top: 1700px;
-
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 40px;
-  /* or 133% */
-
-  display: flex;
-  align-items: center;
-
-  color: #C65759;
+.cards-associations {
+  .dashboard-assos {
+    width: 419px;
+    height: 58px;
+    left: 76px;
+    top: 1700px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #C65759;
+  }
 }
