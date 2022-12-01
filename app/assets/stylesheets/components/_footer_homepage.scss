@@ -1,14 +1,11 @@
 
 .footer-vert {
-height: 162px;
+height: 170px;
 width: 100%;
 background: #1C8D8D;
 display: flex;
 flex-direction: column;
 justify-content: center;
-position: absolute;
-top:100%;
-
 }
 
 .text-footer {
@@ -22,5 +19,7 @@ top:100%;
   height: 66px;
   background-image: url('herbe.svg');
   background-repeat: repeat-x;
-
+  z-index:1;
+  position: relative;
+  top: 2px;
 }
