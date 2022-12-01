@@ -1,16 +1,21 @@
-# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+# This file should contain all the record creation needed to seed the database with its default values.
 require "open-uri"
 # Examples:
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+Conso.destroy_all
+Day.destroy_all
 User.destroy_all
+Meat.destroy_all
 Asso.destroy_all
 
 user1 = User.create!(email: "user1@gmail.com", password: 'password', name: 'Toto')
 user2 = User.create!(email: "user2@gmail.com", password: 'password', name: 'Titi')
+
+puts "#{User.count} days created"
 
 file_l214 = URI.open('https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805933/L214_hzeihf.png')
 asso_l214 = Asso.new(name: "L214", description: "L214 est une association de défense des animaux utilisés comme ressources alimentaires.", url: "https://www.l214.com/")
@@ -42,9 +47,10 @@ asso_b12 = Asso.new(name: "B12", description: "Prévention par la Société vég
 asso_b12.photo.attach(io: file_b12, filename: "B12.png", content_type: "image/png")
 asso_b12.save
 
+puts "#{Asso.count} days created"
+
 # Données pour chaque type de viande (inchangeable)
 
-Meat.destroy_all
 
 boeuf = Meat.create(meat_type: "boeuf", water_impact: 120, carbon_impact: 130, tree_impact: 4, animal_impact: 3)
 poulet = Meat.create(meat_type: "poulet", water_impact: 25, carbon_impact: 45, tree_impact: 3, animal_impact: 2)
@@ -53,9 +59,10 @@ mouton = Meat.create(meat_type: "mouton", water_impact: 30, carbon_impact: 30, t
 poisson = Meat.create(meat_type: "poisson", water_impact: 2, carbon_impact: 10, tree_impact: 0, animal_impact: 1)
 vege = Meat.create(meat_type: "vegetarien", water_impact: 0, carbon_impact: 0, tree_impact: 0, animal_impact: 0)
 
+puts "#{Meat.count} days created"
+
 # La première semaine de toto
 
-Day.destroy_all
 
 day1 = Day.create(date: 20221122, user: user1)
 day2 = Day.create(date: 20221123, user: user1)
@@ -65,7 +72,7 @@ day5 = Day.create(date: 20221126, user: user1)
 day6 = Day.create(date: 20221127, user: user1)
 day7 = Day.create(date: 20221128, user: user1)
 
-Conso.destroy_all
+puts "#{Day.count} days created"
 
 # Lundi (day1), toto mange 2 conso (conso1 et conso2), ce qui donne 600g de boeuf et 200g de poulet
 
@@ -94,3 +101,5 @@ conso10 = Conso.create(quantity: 0, meat: vege, day: day6)
 # Dimanche (day7), toto mange peu de viande, 100g de poulet
 
 conso11 = Conso.create(quantity: 100, meat: poulet, day: day7)
+
+puts "#{Conso.count} days created"
