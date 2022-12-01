@@ -7,7 +7,8 @@
 
 
 <%# 2ème essaie %>
-<%# <div class="container-new"> %>
+<div class="container-new">
+
   <%= simple_form_for [@day] do |f| %>
     <%= f.input :date %>
     <%= f.association :consos, as: :integer %>
@@ -17,7 +18,7 @@
               collection_wrapper_class: 'category-wrapper',
               item_wrapper_class: 'category-item',
               input_html: {class: 'category-selector'},
-              collection: Meat::CATEGORIES, prompt: "Type de viande:" %>
-    <%= f.submit%>
+              collection: Meat::CATEGORIES, label: "Type de viande:" %>
+    <%= f.submit %>
 <% end %>
-<%# </div> %>
+</div>

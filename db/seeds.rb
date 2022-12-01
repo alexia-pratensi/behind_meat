@@ -7,11 +7,12 @@ require "open-uri"
 #   Character.create(name: "Luke", movie: movies.first)
 
 User.destroy_all
+Asso.destroy_all
 
 user1 = User.create!(email: "user1@gmail.com", password: 'password', name: 'Toto')
 user2 = User.create!(email: "user2@gmail.com", password: 'password', name: 'Titi')
 
-Asso.destroy_all
+day1 = Day.create!()
 
 file_l214 = URI.open('https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805933/L214_hzeihf.png')
 asso_l214 = Asso.new(name: "L214", description: "L214 est une association de défense des animaux utilisés comme ressources alimentaires.", url: "https://www.l214.com/")
