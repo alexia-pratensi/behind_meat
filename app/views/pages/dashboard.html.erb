@@ -22,34 +22,42 @@
       <h2 class='title-conso-globale'>L'impact global de ma consommation</h2>
         <div class='grid-conso'>
           <div class='card card-dashboard'>
-            <div class='dash-card-text'>
-              <i class="fa-solid fa-droplet"></i>
-              <p><b>Consommation d'eau</b></p>
-              <p> ??? Litres</p>
+            <div class= 'dash-card-content'>
+              <div class='dash-card-text'>
+                <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805107/water_d8hj6l.png", width: 60, height: 60) %>
+                <p><b>Consommation d'eau</b></p>
+                <p> ??? Litres</p>
+              </div>
             </div>
           </div>
 
           <div class='card card-dashboard'>
             <div class='dash-card-text'>
-              <i class="fa-solid fa-cloud"></i>
-              <p><b>Emission carbone</b></p>
-              <p> ??? Co2</p>
+              <div class='dash-card-text'>
+                <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/nuage_i0fay8.png", class:'dashboard-pic', width: 60, height: 60 ) %>
+                <p class='titre'><b>Emission carbone</b></p>
+                <p> ??? Co2</p>
+              </div>
             </div>
           </div>
 
           <div class='card card-dashboard'>
             <div class='dash-card-text'>
-              <i class="fa-solid fa-tree"></i>
-              <p><b>Déforestation</b></p>
-              <p> ??? arbres</p>
+              <div class='dash-card-text'>
+                <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/arbre_jfxahv.png", width: 60, height: 60, class:'dashboard-pic') %>
+                <p class='titre'><b>Déforestation</b></p>
+                <p> ??? arbres</p>
+              </div>
             </div>
           </div>
 
           <div class='card card-dashboard'>
             <div class='dash-card-text'>
-              <i class="fa-solid fa-cow"></i>
-              <p><b>Souffrance animale</b></p>
-              <p> ??? animaux tués</p>
+              <div class='dash-card-text'>
+                <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/cochon_yw40ko.png", width: 60, height: 60, class:'dashboard-pic' ) %>
+                <p class='titre'><b>Souffrance animale</b></p>
+                <p> ??? animaux tués</p>
+              </div>
             </div>
           </div>
         </div>
