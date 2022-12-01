@@ -17,6 +17,8 @@ user2 = User.create!(email: "user2@gmail.com", password: 'password', name: 'Titi
 
 puts "#{User.count} days created"
 
+# Associations
+
 file_l214 = URI.open('https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805933/L214_hzeihf.png')
 asso_l214 = Asso.new(name: "L214", description: "L214 est une association de défense des animaux utilisés comme ressources alimentaires.", url: "https://www.l214.com/")
 asso_l214.photo.attach(io: file_l214, filename: "L214.png", content_type: "image/png")
@@ -51,7 +53,6 @@ puts "#{Asso.count} days created"
 
 # Données pour chaque type de viande (inchangeable)
 
-
 boeuf = Meat.create(meat_type: "boeuf", water_impact: 120, carbon_impact: 130, tree_impact: 4, animal_impact: 3)
 poulet = Meat.create(meat_type: "poulet", water_impact: 25, carbon_impact: 45, tree_impact: 3, animal_impact: 2)
 porc = Meat.create(meat_type: "porc", water_impact: 52, carbon_impact: 70, tree_impact: 4, animal_impact: 3)
@@ -62,7 +63,6 @@ vege = Meat.create(meat_type: "vegetarien", water_impact: 0, carbon_impact: 0, t
 puts "#{Meat.count} days created"
 
 # La première semaine de toto
-
 
 day1 = Day.create(date: 20221122, user: user1)
 day2 = Day.create(date: 20221123, user: user1)
