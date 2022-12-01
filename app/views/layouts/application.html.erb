@@ -11,20 +11,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
+    <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
   </head>
 
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
 
-    <div class="container main-container">
+    <div class="container main-container ">
       <%= yield %>
     </div>
 
-    <%# <% if current_page?(action: 'home') || current_page?(action: 'about') %>
-      <%# <%= render "shared/footer_homepage" %>
+    <%# <% if current_page?(controller: 'pages', action: 'home') || current_page?(controller: 'pages', action: 'about') %>
+      <%#
     <%# <%else%>
-      <%# <%= render "shared/blue_footer" %>
+       <%# <%= render "shared/blue_footer" %>
+    <%# <%end %>
+    <%= render "shared/footer_homepage"%>
 
   </body>
 </html>

@@ -1,1 +1,88 @@
-// Specific CSS for your home-page
+.main-container-homepage{
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  background: url('https://res.cloudinary.com/dwvsbgwap/image/upload/v1669819633/image_homepage_rogn%C3%A9e_clzb6r.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  margin-bottom: -35px;
+}
+.content-wrapper-homepage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  //rajout
+  margin-bottom: 170px;
+}
+.text-homepage{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.text-homepage > h2 {
+  color: #C65759;
+  font-family: 'Epilogue', sans-serif;
+}
+.buttons-homepage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  a {
+      margin: 10px !important;
+  }
+}
+.cochon-btn {
+  display: flex;
+  flex-direction: column;
+}
+.cochon {
+  width: 148.22px;
+  height: 106.61px;
+  margin-left: 120px;
+  margin-top: -80px;
+}
+.white-button-homepage {
+  border: 1px solid #FF6769;
+  border-radius: 16px;
+  font-family: 'Epilogue', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #FF6769 !important;
+  text-decoration: none;
+  padding: 15px 20px;
+
+}
+.pink-button-homepage {
+  background: linear-gradient(93.22deg, #FF6769 0.53%, #FF6769 0.54%, #FB7550 100%);
+  border-radius: 16px;
+  font-family: 'Epilogue', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #FFF2EF !important;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-right: 10px;
+}

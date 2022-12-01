@@ -1,4 +1,5 @@
 class DaysController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:home, :about, :new, :create, :show]
 
   def show
     @day = Day.find(params[:id])
