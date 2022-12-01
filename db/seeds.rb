@@ -12,8 +12,6 @@ Asso.destroy_all
 user1 = User.create!(email: "user1@gmail.com", password: 'password', name: 'Toto')
 user2 = User.create!(email: "user2@gmail.com", password: 'password', name: 'Titi')
 
-day1 = Day.create!()
-
 file_l214 = URI.open('https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805933/L214_hzeihf.png')
 asso_l214 = Asso.new(name: "L214", description: "L214 est une association de défense des animaux utilisés comme ressources alimentaires.", url: "https://www.l214.com/")
 asso_l214.photo.attach(io: file_l214, filename: "L214.png", content_type: "image/png")
