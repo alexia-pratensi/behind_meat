@@ -127,8 +127,20 @@
 
   // Partie Associations - Div 4
 
-    // Partie Associations - Div 4
+  // Partie Associations - Div 4
 
+  .dashboard-assos {
+      // width: 631px;
+      // height: 58px;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+      display: flex;
+      align-items: center;
+      color: #C65759;
+  }
     .cards-associations {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -138,24 +150,36 @@
         display: flex;
       }
 
+      .petite-div-text {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+
+      .card-title {
+        margin-top: 20px;
+        justify-content: center;
+      }
+
+    }
+
+
+      .card-text {
+        margin-top: 10px;
+        margin-right: 20px;
+      }
+
+      .btn-dashboard-pink {
+        margin-top: 20px;
+        width: 120px;
+        height: 40px;
+        text-decoration: none;
+        margin-left: 50%;
+        margin-bottom: 10px;
+      }
       .image-container-asso {
         display: flex;
       }
 
-      .dashboard-assos {
-        width: 419px;
-        height: 58px;
-        left: 76px;
-        top: 1700px;
-        font-family: 'DM Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 40px;
-        display: flex;
-        align-items: center;
-        color: #C65759;
-      }
     }
   }
 
@@ -163,11 +187,7 @@
     justify-content: center;
     width: 80px;
     height: 80px;
-  }
-
-  .btn-dashboard-pink {
-    margin-top: 50px;
-    width: 220px;
-    height: 55px;
-    text-decoration: none;
+    margin-top: 15% ;
+    margin-left: 20px ;
+    align-items: center;
   }
