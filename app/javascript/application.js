@@ -3,5 +3,8 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
 import { donut } from "./components/charts"
+import { meatQuantity } from "./components/meat_quantity"
 
 donut();
+
+meatQuantity();
