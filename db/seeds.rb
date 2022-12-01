@@ -42,3 +42,56 @@ file_b12 = URI.open('https://res.cloudinary.com/dwvsbgwap/image/upload/v16698059
 asso_b12 = Asso.new(name: "B12", description: "Prévention par la Société végane française de l'importance de la supplémentation en vitamine B12.", url: "https://www.vivelab12.fr/")
 asso_b12.photo.attach(io: file_b12, filename: "B12.png", content_type: "image/png")
 asso_b12.save
+
+# Données pour chaque type de viande (inchangeable)
+
+Meat.destroy_all
+
+boeuf = Meat.create(meat_type: "boeuf", water_impact: 120, carbon_impact: 130, tree_impact: 4, animal_impact: 3)
+poulet = Meat.create(meat_type: "poulet", water_impact: 25, carbon_impact: 45, tree_impact: 3, animal_impact: 2)
+porc = Meat.create(meat_type: "porc", water_impact: 52, carbon_impact: 70, tree_impact: 4, animal_impact: 3)
+mouton = Meat.create(meat_type: "mouton", water_impact: 30, carbon_impact: 30, tree_impact: 2, animal_impact: 1)
+poisson = Meat.create(meat_type: "poisson", water_impact: 2, carbon_impact: 10, tree_impact: 0, animal_impact: 1)
+vege = Meat.create(meat_type: "vegetarien", water_impact: 0, carbon_impact: 0, tree_impact: 0, animal_impact: 0)
+
+# La première semaine de toto
+
+Day.destroy_all
+
+day1 = Day.create(date: 20221122, user: user1)
+day2 = Day.create(date: 20221123, user: user1)
+day3 = Day.create(date: 20221124, user: user1)
+day4 = Day.create(date: 20221125, user: user1)
+day5 = Day.create(date: 20221126, user: user1)
+day6 = Day.create(date: 20221127, user: user1)
+day7 = Day.create(date: 20221128, user: user1)
+
+Conso.destroy_all
+
+# Lundi (day1), toto mange 2 conso (conso1 et conso2), ce qui donne 600g de boeuf et 200g de poulet
+
+conso1 = Conso.create(quantity: 600, meat: boeuf, day: day1)
+conso2 = Conso.create(quantity: 200, meat: poulet, day: day1)
+
+# Mardi (day2), toto mange 2 conso (conso3 et conso4), ce qui donne 400g de porc et 150g de mouton
+
+conso3 = Conso.create(quantity: 400, meat: porc, day: day2)
+conso4 = Conso.create(quantity: 150, meat: mouton, day: day2)
+
+# Mercredi (day3), toto mange 1 conso (conso5), ce qui donne 800g de poisson sur la journée.
+conso5 = Conso.create(quantity: 800, meat: poisson, day: day3)
+
+# Jeudi (day4), toto ne mange pas de viande du tout
+conso6 = Conso.create(quantity: 0, meat: vege, day: day4)
+
+# Vendredi (day5), toto mange 3 conso (conso 7, 8 et 9), ce qui donne 300g de poulet, 200g de boeuf et 200g de poisson
+conso7 = Conso.create(quantity: 300, meat: poulet, day: day5)
+conso8 = Conso.create(quantity: 200, meat: boeuf, day: day5)
+conso9 = Conso.create(quantity: 200, meat: poisson, day: day5)
+
+# Samedi (day6), toto ne mange pas de viande
+conso10 = Conso.create(quantity: 0, meat: vege, day: day6)
+
+# Dimanche (day7), toto mange peu de viande, 100g de poulet
+
+conso11 = Conso.create(quantity: 100, meat: poulet, day: day7)
