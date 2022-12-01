@@ -41,7 +41,8 @@
 }
 
 .category-selector:checked + label {
-  color: white !important;
+  color: white;
+  background-color: #C65759 !important;
 }
 
 
