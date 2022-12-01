@@ -62,6 +62,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
+
     // Cards de la conso globale - Div 1
 
     .card-dashboard {
@@ -87,9 +88,8 @@
   // Conso sur 7 jours - Div 2
 
   .conso-sept {
+
     .week-conso {
-      // width: 631px;
-      // height: 58px;
       font-family: 'DM Sans';
       font-style: normal;
       font-weight: 700;
@@ -127,47 +127,45 @@
 
   // Partie Associations - Div 4
 
-    // Partie Associations - Div 4
+  .cards-associations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
 
-    .cards-associations {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 16px;
+    .card {
+      display: flex;
+    }
 
-      .card {
-        display: flex;
-      }
+    .image-container-asso {
+      display: flex;
+    }
 
-      .image-container-asso {
-        display: flex;
-      }
-
-      .dashboard-assos {
-        width: 419px;
-        height: 58px;
-        left: 76px;
-        top: 1700px;
-        font-family: 'DM Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 40px;
-        display: flex;
-        align-items: center;
-        color: #C65759;
-      }
+    .dashboard-assos {
+      width: 419px;
+      height: 58px;
+      left: 76px;
+      top: 1700px;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 40px;
+      display: flex;
+      align-items: center;
+      color: #C65759;
     }
   }
+}
 
-  .image-card-asso {
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-  }
+.image-card-asso {
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+}
 
-  .btn-dashboard-pink {
-    margin-top: 50px;
-    width: 220px;
-    height: 55px;
-    text-decoration: none;
-  }
+.btn-dashboard-pink {
+  margin-top: 50px;
+  width: 220px;
+  height: 55px;
+  text-decoration: none;
+}
