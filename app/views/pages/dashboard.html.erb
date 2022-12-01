@@ -77,6 +77,7 @@
       <div class='api-title'>
         <h3 class='dashboard-recettes'>Idées recettes</h3>
         <h4>Marmiton</h4>
+        <h5>Prochainement...</h5>
       </div>
     </div>
 
@@ -84,6 +85,7 @@
       <div class='api-title'>
       <h3 class='dashboard-tweets'>Ceci pourrait vous intéresser</h3>
         <h4>Twitter</h4>
+        <h5>Prochainement...</h5>
       </div>
     </div>
   </div>
@@ -100,10 +102,11 @@
               <% else %>
               <%= image_tag "images/logo.png", alt: "associations" %>
               <% end %>
+              <div class="petite-div-text">
               <h5 class="card-title"><%= asso.name%></h5>
-              <p class="card-text"><%= asso.description%></p>
+              <p class="card-text"><%= asso.description%></p></div>
             </div>
-              <a href="<%= asso.url%>" target="_blank" class="btn btn-dashboard-pink pink_button"></a>
+              <a href="<%= asso.url%>" target="_blank" class="btn btn-dashboard-pink pink_button">Visiter le site</a>
             <%# <div class="card-body">
             </div> %>
         </div>

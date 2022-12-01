@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "/", class: "navbar-brand" do %>
-      <div class="d-flex align-items-center">
-        <%= image_tag "logo.png", class: 'logo' %>
+        <div class="d-flex align-items-center">
+          <%= image_tag "logo.png", class: 'logo' %>
         <p class='title'>Behind Meat</p>
       </div>
     <% end %>
@@ -15,28 +15,32 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to "A propos", apropos_path, class: "nav-link text-navbar me-4" %>
-          </li>
+            <%= link_to "A propos", apropos_path, class: "nav-link text-navbar" %></li>
+            <li class="nav-item">
+            <%= link_to "Mon suivi", dashboard_path, class: "nav-link text-navbar" %></li>
+            <li class="nav-item">
+            <%= link_to "Déconnexion", destroy_user_session_path, class: "nav-link text-navbar", data: {turbo_method: :delete} %></li>
           <li class="nav-item dropdown">
+
             <div class='d-flex align-items-center'>
-              <%= image_tag "user.png", class: "dropdown-toggle cursor", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= image_tag "user.png", class: "dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <p class='text-navbar ms-2 me-3'><%=current_user.name%></p>
             </div>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
               <%= link_to "Mon suivi", dashboard_path, class: "dropdown-item" %>
-              <%= link_to "Me déconnecter", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
+              <%# <%= link_to "Me déconnecter", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+            <%# </div> %>
           </li>
         <% else %>
-         <li class="nav-item">
-            <%= link_to "A propos", apropos_path, class: "nav-link text-navbar me-4" %>
+        <li class="nav-item">
+            <%= link_to "A propos", apropos_path, class: "nav-link me-4 text-navbar" %>
           </li>
           <li class="nav-item d-flex align-items-center">
             <%= image_tag "user.png"%>
             <%= link_to "Me connecter", new_user_session_path, class: "nav-link text-navbar" %>
           </li>
         <% end %>
-      </ul>
     </div>
   </div>
 </div>
