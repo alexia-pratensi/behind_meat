@@ -6,6 +6,8 @@ class DaysController < ApplicationController
 
   def new
     @day = Day.new
+    @conso = Conso.new
+    @meat = Meat.new
   end
 
   def create
