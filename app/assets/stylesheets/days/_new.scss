@@ -1,8 +1,8 @@
+
 .grid-animaux {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap:16px;
-}
 
 .div-text-form {
   background: linear-gradient(93.22deg, #FF6769 0.53%, #FF6769 0.54%, #FB7550 100%);
@@ -22,12 +22,14 @@
     border: none;
   }
 
+
   #input-quantity {
     width: 70px;
     height: 50px;
     border: none;
     background: #F5F5F5;
   }
+
 
 
 }
