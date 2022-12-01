@@ -8,16 +8,82 @@
 
 <%# 2ème essaie %>
 <%# <div class="container-new"> %>
-  <%= simple_form_for [@day] do |f| %>
-    <%= f.input :date %>
-    <%= f.association :consos, as: :integer %>
-    <%= f.association :meats,
-              as: :radio_buttons,
+  <%# <%= simple_form_for [@day] do |f| %>
+    <%# <%= f.input :date %>
+    <%# <%= f.association :consos, as: :integer %>
+    <%# <%= f.association :meats, %>
+              <%# as: :radio_buttons,
               collection_wrapper_tag: 'div',
               collection_wrapper_class: 'category-wrapper',
               item_wrapper_class: 'category-item',
-              input_html: {class: 'category-selector'},
+              input_html: {class: 'category-selector'}
               collection: Meat::CATEGORIES, prompt: "Type de viande:" %>
-    <%= f.submit%>
-<% end %>
+    <%# <%= f.submit%>
+<%# <% end %>
 <%# </div> %>
+<div class="div-general-form d-flex">
+  <div class="div-text-form">
+    <p>Saviez-vous que...</p>
+  </div>
+    <div class='date-form'>
+    </div>
+
+    <div class="grid-animaux">
+    <%# la vache partie visible %>
+      <div class="card" style="width: 18rem;">
+        <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805101/vache_eur5rc.png" class="card-img-top" alt="...">
+      <%#partie toggle %>
+        <div class="card-body card-body-animal">
+          <h1 id="js-counter"> 0 </h1>
+          <button id="btn_decrement" class="button-quantity" type="button"> - </button>
+          <button id="btn_increment" class="button-quantity" type="button"> + </button>
+          <input id="cb_enabled "type="checkbox" checked />
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805113/cochon_hccmxx.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805113/coq_nsiadn.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805113/mouton_jxmcdx.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+  const checkbox = document.getElementById("cb_enabled"),
+    increment = document.getElementById("btn_increment"),
+    decrement = document.getElementById("btn_decrement"),
+    counter = document.getElementById("js-counter");
+    console.log(checkbox);
+  checkbox.addEventListener("change", function(checkbox) {
+    if (this.checked === false) {
+      increment.disabled = true;
+      decrement.disabled = true;
+    } else {
+      increment.disabled = false;
+      decrement.disabled = false;
+    }
+  });
+  increment.onclick = () => {
+    const num = parseInt(counter.innerHTML);
+    counter.innerHTML = num + 1;
+  }
+  decrement.onclick = () => {
+    const num = parseInt(counter.innerHTML);
+    counter.innerHTML = num - 1;
+  }
+</script>
