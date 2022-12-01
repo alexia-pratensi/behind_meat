@@ -6,12 +6,16 @@ require "open-uri"
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.destroy_all
+Conso.destroy_all
+Day.destroy_all
 Asso.destroy_all
+User.destroy_all
+Meat.destroy_all
 
 user1 = User.create!(email: "user1@gmail.com", password: 'password', name: 'Toto')
 user2 = User.create!(email: "user2@gmail.com", password: 'password', name: 'Titi')
 
+# Associations
 file_l214 = URI.open('https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805933/L214_hzeihf.png')
 asso_l214 = Asso.new(name: "L214", description: "L214 est une association de défense des animaux utilisés comme ressources alimentaires.", url: "https://www.l214.com/")
 asso_l214.photo.attach(io: file_l214, filename: "L214.png", content_type: "image/png")
@@ -44,8 +48,6 @@ asso_b12.save
 
 # Données pour chaque type de viande (inchangeable)
 
-Meat.destroy_all
-
 boeuf = Meat.create(meat_type: "boeuf", water_impact: 120, carbon_impact: 130, tree_impact: 4, animal_impact: 3)
 poulet = Meat.create(meat_type: "poulet", water_impact: 25, carbon_impact: 45, tree_impact: 3, animal_impact: 2)
 porc = Meat.create(meat_type: "porc", water_impact: 52, carbon_impact: 70, tree_impact: 4, animal_impact: 3)
@@ -55,8 +57,6 @@ vege = Meat.create(meat_type: "vegetarien", water_impact: 0, carbon_impact: 0, t
 
 # La première semaine de toto
 
-Day.destroy_all
-
 day1 = Day.create(date: 20221122, user: user1)
 day2 = Day.create(date: 20221123, user: user1)
 day3 = Day.create(date: 20221124, user: user1)
@@ -64,8 +64,6 @@ day4 = Day.create(date: 20221125, user: user1)
 day5 = Day.create(date: 20221126, user: user1)
 day6 = Day.create(date: 20221127, user: user1)
 day7 = Day.create(date: 20221128, user: user1)
-
-Conso.destroy_all
 
 # Lundi (day1), toto mange 2 conso (conso1 et conso2), ce qui donne 600g de boeuf et 200g de poulet
 
