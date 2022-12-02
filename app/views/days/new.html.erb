@@ -5,7 +5,16 @@
      <p class="text-saviez-vous">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
   </div>
   <div class="container-form-quantity">
-    <h2>Combien de viande avez-vous consommé aujourd'hui ?</h2>
+
+    <h2>Quelle quantité de viande avez-vous consommé aujourd'hui ?(en gramme)</h2>
+
+        <%= simple_form_for @day, data: { controller: 'flatpickr' } do |f| %>
+          <%= f.input :date, as: :string,
+                altInput: true,
+                dateFormat: "DD-MM-YYYY",
+                input_html: { data: { flatpickr_target: "date" } } %>
+        <% end %>
+
       <%# <div class='date-form'>
         <% simple_form_for @day do |f|%>
           <%# <%=f.input :date, as: :string, class: 'form-control datepicker'%>
@@ -68,92 +77,35 @@
         </div>
         </div>
       </div>
+    <%# card poisson%>
+    <div class="card card-form" style="width: 18rem;">
+        <h4>Viande de poisson:</h4>
+        <div class="card-body-animal">
+          <button id="btn_decrement_poisson" class="button-quantity" type="button"> - </button>
+          <div class="input-quantity">
+            <h5 id="quantity_poisson" >0 </h5>
+          </div>
+          <button id="btn_increment_poisson" class="button-quantity" type="button"> + </button>
+        <div class="portrait-animaux">
+          <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669973646/fish_1_jawcyg.png"  alt="poisson">
+        </div>
+        </div>
+      </div>
+    <%# card végétarien%>
+     <div class="card card-form" id="card-vegetatien" style="width: 18rem;">
+        <h4>Je n'ai pas mangé de viande aujourd'hui</h4>
+        <div class="card-body-animal">
+          <%# <button id="btn_decrement_mouton" class="button-quantity" type="button"> - </button>
+          <div class="input-quantity">
+            <h5 id="quantity_mouton" >0 </h5>
+          </div>
+          <button id="btn_increment_mouton" class="button-quantity" type="button"> + </button> %>
+        <div class="portrait-animaux">
+          <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669973646/broccolii_1_ajolif.png"  alt="vegetarien">
+        </div>
+        </div>
+      </div>
+      <div id="submit-button" class="btn btn-primary">Submit</div>
     </div>
   </div>
 </div>
-<script>
-//JS pour la card vache
-  let incrementVache = document.getElementById("btn_increment_vache");
-  let decrementVache = document.getElementById("btn_decrement_vache");
-  let counterVache = document.getElementById("quantity_vache");
-
-  let numVache = 0;
-
-  incrementVache.onclick = () => {
-    let numVache = parseInt(counterVache.innerHTML);
-    counterVache.innerHTML = numVache + 1;
-  }
-
-  decrementVache.onclick = () => {
-    const numVache = parseInt(counterVache.innerHTML);
-    counterVache.innerHTML = numVache - 1;
-  }
-
-  //localStorage.setItem("vacheQuantity", numVache);
- // console.log(localStorage);
-  console.log(numVache);
-
-
-//JS pour la card cochon
-  let incrementCochon = document.getElementById("btn_increment_cochon");
-  let decrementCochon = document.getElementById("btn_decrement_cochon");
-  let counterCochon = document.getElementById("quantity_cochon");
-
-  let numCochon = 0;
-
-  incrementCochon.onclick = () => {
-    let numCochon = parseInt(counterCochon.innerHTML);
-    counterCochon.innerHTML = numCochon + 1;
-  }
-
-  decrementCochon.onclick = () => {
-    const numCochon = parseInt(counterCochon.innerHTML);
-    counterCochon.innerHTML = numCochon - 1;
-  }
-
-  let cochonQuantity = localStorage.setItem("cochonQuantity", numCochon)
-  console.log(numCochon)
-  console.log('cochon terminé!')
-
-  //JS pour la card poulet
-  let incrementPoulet = document.getElementById("btn_increment_poulet");
-  let decrementPoulet = document.getElementById("btn_decrement_poulet");
-  let counterPoulet = document.getElementById("quantity_poulet");
-
-  let numPoulet = 0;
-
-  incrementPoulet.onclick = () => {
-    let numPoulet = parseInt(counterPoulet.innerHTML);
-    counterPoulet.innerHTML = numPoulet + 1;
-  }
-
-  decrementPoulet.onclick = () => {
-    const numPoulet = parseInt(counterPoulet.innerHTML);
-    counterPoulet.innerHTML = numPoulet - 1;
-  }
-
-  let pouletQuantity = localStorage.setItem("cochonQuantity", numPoulet)
-  console.log(numPoulet)
-  console.log('poulet terminé!')
-
-   //JS pour la card mouton
-  let incrementMouton = document.getElementById("btn_increment_mouton");
-  let decrementMouton = document.getElementById("btn_decrement_mouton");
-  let counterMouton = document.getElementById("quantity_mouton");
-
-  let numMouton = 0;
-
-  incrementMouton.onclick = () => {
-    let numMouton = parseInt(counterMouton.innerHTML);
-    counterMouton.innerHTML = numMouton + 1;
-  }
-
-  decrementMouton.onclick = () => {
-    const numMouton = parseInt(counterMouton.innerHTML);
-    counterMouton.innerHTML = numMouton - 1;
-  }
-
-  let moutonQuantity = localStorage.setItem("moutonQuantity", numMouton)
-  console.log(numMouton)
-  console.log('mouton terminé!')
-</script>
