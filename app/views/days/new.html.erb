@@ -2,11 +2,11 @@
   <div class="div-text-form">
       <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669939897/ombre_gs8dck.png" alt="ombre" class="ombre">
      <p class="saviez-vous">Saviez-vous que...</p>
-     <p class="text-saviez-vous">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+     <p class="text-saviez-vous">Pour le saviez vous que dans le formulaire : "La plus grande association de nutritionnistes au monde, l'ADA (Association de Diététique Américaine) a approuvé depuis 1987 les régimes végétariens et végans, qu'ils soient suivis par un enfant, une femme enceinte, un sportif ou une personne âgée." </p>
   </div>
   <div class="container-form-quantity">
 
-    <h2>Quelle quantité de viande avez-vous consommé aujourd'hui ?(en gramme)</h2>
+    <h2>Quelle quantité de viande avez-vous consommé aujourd'hui ? (en gramme)</h2>
 
         <%= simple_form_for @day, data: { controller: 'flatpickr' } do |f| %>
           <%= f.input :date, as: :string,
@@ -92,7 +92,7 @@
         </div>
       </div>
     <%# card végétarien%>
-     <div class="card card-form" id="card-vegetatien" style="width: 18rem;">
+     <div class="card card-form" id="card-vegetarien" style="width: 18rem;">
         <h4>Je n'ai pas mangé de viande aujourd'hui</h4>
         <div class="card-body-animal">
           <%# <button id="btn_decrement_mouton" class="button-quantity" type="button"> - </button>
@@ -105,7 +105,9 @@
         </div>
         </div>
       </div>
-      <div id="submit-button" class="btn btn-primary">Submit</div>
     </div>
+      <div id="submit-button" class="btn pink_button">Découvrir mon impact</div>
   </div>
 </div>
+
+<%# dans submit = <%=link_to 'voir mon impact', day_path(@day.id)? %>
