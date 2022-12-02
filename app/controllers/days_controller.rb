@@ -4,6 +4,10 @@ class DaysController < ApplicationController
   def show
     @day = Day.find(params[:id])
     @assos = Asso.all
+    @water_impact_show = water_impact_calculator
+    @carbon_impact_show = carbon_impact_calculator
+    @tree_impact_show = tree_impact_calculator
+    @animal_impact_show = animal_impact_calculator
   end
 
   def new
@@ -40,4 +44,43 @@ class DaysController < ApplicationController
     params.require(:meat).permit(:type)
   end
 
+  def water_impact_calculator
+    water_impact_show = 0
+    @day.consos.each do |conso|
+      # conso.meat.water_impact
+      # conso.quantity
+      water_impact_show += (conso.quantity * conso.meat.water_impact) / 1000
+    end
+    return water_impact_show
+  end
+
+  def carbon_impact_calculator
+    carbon_impact_show = 0
+    @day.consos.each do |conso|
+      # conso.meat.carbon_impact
+      # conso.quantity
+      carbon_impact_show += (conso.quantity * conso.meat.carbon_impact) / 1000
+    end
+    return carbon_impact_show
+  end
+
+  def tree_impact_calculator
+    tree_impact_show = 0
+    @day.consos.each do |conso|
+      # conso.meat.tree_impact
+      # conso.quantity
+      tree_impact_show += (conso.quantity * conso.meat.tree_impact) / 1000
+    end
+    return tree_impact_show
+  end
+
+  def animal_impact_calculator
+    animal_impact_show = 0
+    @day.consos.each do |conso|
+      # conso.meat.animal_impact
+      # conso.quantity
+      animal_impact_show += (conso.quantity * conso.meat.animal_impact) / 1000
+    end
+    return animal_impact_show
+  end
 end
