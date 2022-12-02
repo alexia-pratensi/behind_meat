@@ -8,7 +8,7 @@ export const donut = () => {
     type: 'doughnut',
     data: {
       // via le controller de pages et donc vue dashboard, récupérer infos conso de la journée
-      labels: ['Beef', 'Chicken', 'Pork', 'Sheep', 'Fish'],
+      labels: ['Boeuf', 'Poulet', 'Porc', 'Mouton', 'Poisson'],
       datasets: [{
         label: '%',
         data: [12, 19, 2, 8, 5],
