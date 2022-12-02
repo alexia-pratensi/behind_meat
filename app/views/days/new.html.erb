@@ -12,7 +12,7 @@
           <%= f.input :date, as: :string,
                 altInput: true,
                 dateFormat: "DD-MM-YYYY",
-                input_html: { data: { flatpickr_target: "date" } } %>
+                input_html: { data: { flatpickr_target: "date" } }, class:"date-name" %>
         <% end %>
 
       <%# <div class='date-form'>
@@ -25,11 +25,11 @@
       <div class="card card-form" style="width: 18rem;">
         <h4>Viande de boeuf:</h4>
         <div class="card-body-animal">
-          <button id="btn_decrement_vache" class="button-quantity" type="button"> - </button>
+          <button id="btn_decrement_vache" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
             <h5 id="quantity_vache">0 </h5>
           </div>
-          <button id="btn_increment_vache" class="button-quantity" type="button"> + </button>
+          <button id="btn_increment_vache" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
           <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669935093/Mask_group_ft8exs.png" class="card-img-top" alt="...">
         </div>
@@ -39,11 +39,11 @@
       <div class="card card-form" style="width: 18rem;">
         <h4>Viande de porc:</h4>
         <div class="card-body-animal">
-          <button id="btn_decrement_cochon" class="button-quantity" type="button"> - </button>
+          <button id="btn_decrement_cochon" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
             <h5 id="quantity_cochon">0 </h5>
           </div>
-          <button id="btn_increment_cochon" class="button-quantity" type="button"> + </button>
+          <button id="btn_increment_cochon" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
           <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669935089/Mask_group-2_iw20ad.png" class="card-img-top" alt="...">
         </div>
@@ -53,11 +53,11 @@
       <div class="card card-form" style="width: 18rem;">
          <h4>Viande de volaile:</h4>
         <div class="card-body-animal">
-          <button id="btn_decrement_poulet" class="button-quantity" type="button"> - </button>
+          <button id="btn_decrement_poulet" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
             <h5 id="quantity_poulet">0 </h5>
           </div>
-          <button id="btn_increment_poulet" class="button-quantity" type="button"> + </button>
+          <button id="btn_increment_poulet" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
           <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669935089/Mask_group-1_qsfg1e.png" class="card-img-top" alt="...">
         </div>
@@ -67,11 +67,11 @@
       <div class="card card-form" style="width: 18rem;">
         <h4>Viande de mouton:</h4>
         <div class="card-body-animal">
-          <button id="btn_decrement_mouton" class="button-quantity" type="button"> - </button>
+          <button id="btn_decrement_mouton" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
             <h5 id="quantity_mouton" >0 </h5>
           </div>
-          <button id="btn_increment_mouton" class="button-quantity" type="button"> + </button>
+          <button id="btn_increment_mouton" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
           <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669935089/Mask_group-3_z3mfdc.png"  alt="...">
         </div>
@@ -81,11 +81,11 @@
     <div class="card card-form" style="width: 18rem;">
         <h4>Viande de poisson:</h4>
         <div class="card-body-animal">
-          <button id="btn_decrement_poisson" class="button-quantity" type="button"> - </button>
+          <button id="btn_decrement_poisson" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
             <h5 id="quantity_poisson" >0 </h5>
           </div>
-          <button id="btn_increment_poisson" class="button-quantity" type="button"> + </button>
+          <button id="btn_increment_poisson" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
           <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669973646/fish_1_jawcyg.png"  alt="poisson">
         </div>

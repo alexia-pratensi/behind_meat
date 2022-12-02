@@ -1,9 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
-import { meatQuantity } from "../components/meat_quantity"
+import { donut } from "../components/charts"
 
 export default class extends Controller {
   connect() {
-    meatQuantity();
-
+    donut();
   }
 }
