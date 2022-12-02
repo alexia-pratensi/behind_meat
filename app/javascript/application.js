@@ -2,3 +2,12 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
+import { donut } from "./components/charts"
+
+donut();
+
+// export default class extends Controller {
+//   connect() {
+//     donut();
+//   }
+// }
