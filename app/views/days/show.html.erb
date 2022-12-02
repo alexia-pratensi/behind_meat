@@ -2,24 +2,24 @@
 
 <div class='dashboard-container'>
 <br>
-  <h1><b>Bonjour <%=current_user.name%>,</b></h1>
+  <h1><b>Le résultat de mes entrées</b></h1>
 
 <!-- Conso générale Div 1 -->
 
 <div class='recap-conso'>
   <div class='day-conso'>
-    <h2 class='title-conso'>Ma dernière consommation</h2>
+    <h2 class='title-conso'>Ma consommation</h2>
     <canvas id="myChart" data-controller="hello"></canvas>
 <%# <canvas id="myChart" data-meats=<%= @meats.pluck(:name) data-consos = @consos %>
 <%# </canvas> %>
     <div class='dashboard-buttons'>
-      <a class="pink_button btn-dashboard-pink" href="#">Mon suivi</a>
+      <a class="pink_button btn-dashboard-pink" href="/users/sign_in">Créer mon suivi journalier</a>
       <a class="white_button btn-dashboard-pink" href="#">Modifier</a>
     </div>
   </div>
 
   <div class='dashboard-row'>
-      <h2 class='title-conso-globale'>L'impact global de ma consommation</h2>
+      <h2 class='title-conso-globale'>L'impact de ma consommation</h2>
         <div class='grid-conso'>
           <div class='card card-dashboard'>
             <div class= 'dash-card-content'>
@@ -32,7 +32,7 @@
           </div>
 
           <div class='card card-dashboard'>
-            <div class='dash-card-text'>
+            <div class='dash-card-content'>
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/nuage_i0fay8.png", class:'dashboard-pic', width: 60, height: 60 ) %>
                 <p class='titre'><b>Emission carbone</b></p>
@@ -42,7 +42,7 @@
           </div>
 
           <div class='card card-dashboard'>
-            <div class='dash-card-text'>
+            <div class='dash-card-content'>
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/arbre_jfxahv.png", width: 60, height: 60, class:'dashboard-pic') %>
                 <p class='titre'><b>Déforestation</b></p>
@@ -52,7 +52,7 @@
           </div>
 
           <div class='card card-dashboard'>
-            <div class='dash-card-text'>
+            <div class='dash-card-content'>
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/cochon_yw40ko.png", width: 60, height: 60, class:'dashboard-pic' ) %>
                 <p class='titre'><b>Souffrance animale</b></p>
@@ -64,28 +64,24 @@
   </div>
 </div>
 
-<!-- Conso sur 7 jours - Div 2 -->
-
-  <div class='conso-sept'>
-    <h3 class='week-conso'>Ma consommation sur 7 jours</h3>
-  </div>
 
 <!-- APIs -->
-
-  <div class='dashboard-apis'>
-    <div class='dash-api'>
-      <div class='api-title'>
-        <h3 class='dashboard-recettes'>Idées recettes</h3>
-        <h4>Marmiton</h4>
-        <h5>Prochainement...</h5>
+  <div class="api">
+    <div class='dashboard-apis'>
+      <div class='dash-api'>
+        <div class='api-title'>
+          <h3 class='dashboard-recettes'>Idées recettes</h3>
+          <h4>Marmiton</h4>
+          <h5>Prochainement...</h5>
+        </div>
       </div>
-    </div>
 
-    <div class='dash-api'>
-      <div class='api-title'>
-      <h3 class='dashboard-tweets'>Ceci pourrait vous intéresser</h3>
-        <h4>Twitter</h4>
-        <h5>Prochainement...</h5>
+      <div class='dash-api'>
+        <div class='api-title'>
+        <h3 class='dashboard-tweets'>Ceci pourrait vous intéresser</h3>
+          <h4>Twitter</h4>
+          <h5>Prochainement...</h5>
+        </div>
       </div>
     </div>
   </div>
