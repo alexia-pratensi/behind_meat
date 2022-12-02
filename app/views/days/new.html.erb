@@ -6,6 +6,15 @@
   </div>
   <div class="container-form-quantity">
     <h2>Combien de viande avez-vous consommé aujourd'hui ?</h2>
+
+        <%= simple_form_for @day, data: { controller: 'flatpickr' } do |f| %>
+          <%= f.input :date, as: :string,
+                altInput: true,
+                altFormat: "F j, Y",
+                dateFormat: "Y-m-d",
+                input_html: { data: { flatpickr_target: "date" } } %>
+        <% end %>
+
       <%# <div class='date-form'>
         <% simple_form_for @day do |f|%>
           <%# <%=f.input :date, as: :string, class: 'form-control datepicker'%>
