@@ -68,7 +68,9 @@
 
   <div class='conso-sept'>
     <h3 class='week-conso'>Ma consommation sur 7 jours</h3>
-    <p>Prochainement...</p>
+    <% @consos.each do | conso | %>
+    <%= conso.quantity %>
+    <% end %>
   </div>
 
 <!-- APIs -->
