@@ -3,6 +3,7 @@ class DaysController < ApplicationController
 
   def show
     @day = Day.find(params[:id])
+    @assos = Asso.all
   end
 
   def new

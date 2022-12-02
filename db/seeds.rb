@@ -15,7 +15,7 @@ Asso.destroy_all
 user1 = User.create!(email: "user1@gmail.com", password: 'password', name: 'Toto')
 user2 = User.create!(email: "user2@gmail.com", password: 'password', name: 'Titi')
 
-puts "#{User.count} days created"
+puts "#{User.count} users created"
 
 # Associations
 
@@ -49,7 +49,7 @@ asso_b12 = Asso.new(name: "B12", description: "Prévention par la Société vég
 asso_b12.photo.attach(io: file_b12, filename: "B12.png", content_type: "image/png")
 asso_b12.save
 
-puts "#{Asso.count} days created"
+puts "#{Asso.count} assos created"
 
 # Données pour chaque type de viande (inchangeable)
 
@@ -60,7 +60,7 @@ mouton = Meat.create(meat_type: "mouton", water_impact: 30, carbon_impact: 30, t
 poisson = Meat.create(meat_type: "poisson", water_impact: 2, carbon_impact: 10, tree_impact: 0, animal_impact: 1)
 vege = Meat.create(meat_type: "vegetarien", water_impact: 0, carbon_impact: 0, tree_impact: 0, animal_impact: 0)
 
-puts "#{Meat.count} days created"
+puts "#{Meat.count} meats created"
 
 # La première semaine de toto
 
@@ -102,4 +102,4 @@ conso10 = Conso.create(quantity: 0, meat: vege, day: day6)
 
 conso11 = Conso.create(quantity: 100, meat: poulet, day: day7)
 
-puts "#{Conso.count} days created"
+puts "#{Conso.count} consos created"
