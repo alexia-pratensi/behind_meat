@@ -6,5 +6,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @assos = Asso.all
+    @consos = Conso.all
+    @days = Day.all
   end
 end
