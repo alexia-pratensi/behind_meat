@@ -104,7 +104,7 @@ export const meatQuantity = () => {
    let PoissonQuantity = localStorage.setItem("poissonQuantity", numPoisson )
    console.log('poisson sauvxsxzé!')
 
-   // pour la card poisson
+   // pour la card vege
    //?
 
   //pour envoyer les inputs au controller de day
@@ -112,6 +112,7 @@ export const meatQuantity = () => {
   const submitButton = document.querySelector('#submit-button')
   submitButton.addEventListener('click', () => {
     const csrf = document.getElementsByName("csrf-token")[0].content
+    let dateQuantity = document.getElementById('date-quantity')
     axios.post('/days', {
       vache: counterVache.textContent,
       poulet: counterPoulet.textContent,
@@ -119,7 +120,7 @@ export const meatQuantity = () => {
       mouton: counterMouton.textContent,
       poisson: counterPoisson.textContent,
 
-      day: {date: '10/12/22'}
+      day: {date: dateQuantity}
     }, {
       headers: {
         'X-CSRF-Token': csrf
@@ -137,6 +138,7 @@ export const meatQuantity = () => {
     const cardVegetarien = document.querySelector('#card-vegetarien')
     cardVegetarien.addEventListener('click', () => {
     const csrf = document.getElementsByName("csrf-token")[0].content
+    let dateQuantity = document.getElementById('date-quantity')
     axios.post('/days', {
       vache: 0,
       poulet: 0,
@@ -144,7 +146,7 @@ export const meatQuantity = () => {
       mouton: 0,
       poisson: 0,
 
-      day: {date: '10/12/22'}
+      day: {date: dateQuantity}
     }, {
       headers: {
         'X-CSRF-Token': csrf
