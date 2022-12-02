@@ -13,8 +13,8 @@
 <%# <canvas id="myChart" data-meats=<%= @meats.pluck(:name) data-consos = @consos %>
 <%# </canvas> %>
     <div class='dashboard-buttons'>
-      <a class="pink_button btn-dashboard-pink" href="/users/sign_in">Créer mon suivi journalier</a>
-      <a class="white_button btn-dashboard-pink" href="#">Modifier</a>
+      <a class="pink_button btn-dashboard-pink" href="/dashboard">Suivi journalier</a>
+      <a class="white_button btn-dashboard-pink" href="#">Modifier ma saisie</a>
     </div>
   </div>
 
@@ -26,7 +26,7 @@
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805107/water_d8hj6l.png", width: 60, height: 60) %>
                 <p><b>Consommation d'eau</b></p>
-                <p> 200 Litres</p>
+                <p> <%= @water_impact_show%> litres </p>
               </div>
             </div>
           </div>
@@ -36,7 +36,7 @@
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/nuage_i0fay8.png", class:'dashboard-pic', width: 60, height: 60 ) %>
                 <p class='titre'><b>Emission carbone</b></p>
-                <p> 452 Co2</p>
+                <p><%= @carbon_impact_show%> cO2</p>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/arbre_jfxahv.png", width: 60, height: 60, class:'dashboard-pic') %>
                 <p class='titre'><b>Déforestation</b></p>
-                <p> 38 arbres</p>
+                <p><%= @tree_impact_show%> arbres</p>
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/cochon_yw40ko.png", width: 60, height: 60, class:'dashboard-pic' ) %>
                 <p class='titre'><b>Souffrance animale</b></p>
-                <p> 5 animaux tués</p>
+                <p><%= @animal_impact_show%> animaux tués</p>
               </div>
             </div>
           </div>
