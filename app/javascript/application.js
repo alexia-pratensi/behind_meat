@@ -5,4 +5,3 @@ import "bootstrap"
 import { meatQuantity } from "./components/meat_quantity"
 
 meatQuantity();
-
