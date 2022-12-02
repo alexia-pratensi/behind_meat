@@ -1,36 +1,86 @@
 
 .grid-animaux {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap:16px;
 
+}
 .div-text-form {
-  background: linear-gradient(93.22deg, #FF6769 0.53%, #FF6769 0.54%, #FB7550 100%);
+  background: linear-gradient(180.22deg, #FF3E6A 0.53%, #FAAD81 100%);
   margin-left:-180px;
   width: 40%;
-  margin-bottom: -60px
+  margin-bottom: -60px;
+  height: 100vh;
+  .text-saviez-vous{
+    margin-left: 116px;
+    width: 300px;
+    color: black;
+  }
 }
 // gestion quantité
-#gestion-quantity {
-
 
   .button-quantity  {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 30px;
     background: #EDCDCE;
     border-radius: 8px;
     border: none;
   }
+.card-form{
+  border-radius: 20px;
+  padding: 20px;
+  h4{
+    color: #C65759;
+  }
+  &:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+}
 
-
-  #input-quantity {
+  .input-quantity {
     width: 70px;
-    height: 50px;
+    height: 30px;
     border: none;
     background: #F5F5F5;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
 
+  .card-body-animal {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .saviez-vous {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    text-align: center;
+  }
+.container-form-quantity {
+  margin: auto;
 
+  h2 {
+    color: #C65759;
+    font-family: 'Epilogue', sans-serif;
+    padding: 40px;
+  }
 }
+.portrait-animaux {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width:fit-content;
+  margin-bottom: 10px;
+}
+.ombre {
+  height: 117px;
+  width: 241px;
+  margin-left: 110px;
+  margin-top: 117px;
 }
