@@ -2,6 +2,7 @@ class DaysController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :about, :new, :create, :show]
 
   def show
+    @assos = Asso.all
     @day = Day.find(params[:id])
     @assos = Asso.all
     @water_impact_show = water_impact_calculator
@@ -27,14 +28,18 @@ class DaysController < ApplicationController
     # @meat = Meat.new(meat_params)
 
     if @day.save
-      create_conso()
+      # create_conso
       # if params['poulet'].to_i.positive?
       #   @conso = Conso.new
       #   @conso.quantity = params['poulet'].to_i
       #   @conso.meat_id = Meat.find_by_meat_type('poulet').id
       #   @conso.day_id = @day.id
       # end
-      redirect_to day_path(@day)
+      #
+      # respond_to do |format|
+      #   format.html @day.id
+      #   format.text puts 'text response !!!!!!!!!!!'
+      # end
     else
       render :new, status: :unprocessable_entity
     end
@@ -94,7 +99,7 @@ class DaysController < ApplicationController
     return animal_impact_show
   end
 
-  def create_conso(meat)
+  def create_conso
     meat = Meat.find_by_meat_type(meat)
     @conso = Conso.new
     @conso.quantity = params[meat.meat_type].to_i

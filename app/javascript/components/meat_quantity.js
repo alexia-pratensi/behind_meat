@@ -102,7 +102,7 @@ export const meatQuantity = () => {
    }
 
    let PoissonQuantity = localStorage.setItem("poissonQuantity", numPoisson )
-   console.log('poisson terminé!')
+   console.log('poisson sauvxsxzé!')
 
    // pour la card poisson
    //?
@@ -126,7 +126,7 @@ export const meatQuantity = () => {
       }
     })
     .then(function (response) {
-      console.log(response);
+      window.location.assign("/dashboard");
     })
     .catch(function (error) {
       console.log(error);
@@ -134,7 +134,7 @@ export const meatQuantity = () => {
   });
 
     // calcul pour card vegetarien
-    const cardVegetarien = document.querySelector('#card-vegetatien')
+    const cardVegetarien = document.querySelector('#card-vegetarien')
     cardVegetarien.addEventListener('click', () => {
     const csrf = document.getElementsByName("csrf-token")[0].content
     axios.post('/days', {
