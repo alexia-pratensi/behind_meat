@@ -9,9 +9,8 @@
 
         <%= simple_form_for @day, data: { controller: 'flatpickr' } do |f| %>
           <%= f.input :date, as: :string,
-                altInput: true,
-                altFormat: "F j, Y",
-                dateFormat: "Y-m-d",
+                # altInput: true,
+                dateFormat: "DD-MM-YYYY",
                 input_html: { data: { flatpickr_target: "date" } } %>
         <% end %>
 
