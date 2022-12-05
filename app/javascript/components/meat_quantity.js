@@ -1,47 +1,40 @@
 import axios from 'axios'
 
 export const meatQuantity = () => {
-  let incrementVache = document.getElementById("btn_increment_vache");
-  let decrementVache = document.getElementById("btn_decrement_vache");
-  let counterVache = document.getElementById("quantity_vache");
+  let incrementBoeuf = document.getElementById("btn_increment_boeuf");
+  let decrementBoeuf = document.getElementById("btn_decrement_boeuf");
+  let counterBoeuf = document.getElementById("quantity_boeuf");
 
-  let numVache = 0;
+  let numBoeuf = 0;
 
-  incrementVache.onclick = () => {
-    let numVache = parseInt(counterVache.innerHTML);
-    counterVache.innerHTML = numVache + 50;
+  incrementBoeuf.onclick = () => {
+    let numBoeuf = parseInt(counterBoeuf.innerHTML);
+    counterBoeuf.innerHTML = numBoeuf + 50;
   }
 
-  decrementVache.onclick = () => {
-    const numVache = parseInt(counterVache.innerHTML);
-    counterVache.innerHTML = numVache - 50;
+  decrementBoeuf.onclick = () => {
+    const numBoeuf = parseInt(counterBoeuf.innerHTML);
+    counterBoeuf.innerHTML = numBoeuf - 50;
   }
 
-  localStorage.setItem("vacheQuantity", numVache);
- // console.log(localStorage);
-  console.log(numVache);
 
 
-  //JS pour la card cochon
-  let incrementCochon = document.getElementById("btn_increment_cochon");
-  let decrementCochon = document.getElementById("btn_decrement_cochon");
-  let counterCochon = document.getElementById("quantity_cochon");
+  //JS pour la card Porc
+  let incrementPorc = document.getElementById("btn_increment_porc");
+  let decrementPorc = document.getElementById("btn_decrement_porc");
+  let counterPorc = document.getElementById("quantity_porc");
 
-  let numCochon = 0;
+  let numPorc = 0;
 
-  incrementCochon.onclick = () => {
-    let numCochon = parseInt(counterCochon.innerHTML);
-    counterCochon.innerHTML = numCochon + 50;
+  incrementPorc.onclick = () => {
+    let numPorc = parseInt(counterPorc.innerHTML);
+    counterPorc.innerHTML = numPorc + 50;
   }
 
-  decrementCochon.onclick = () => {
-    const numCochon = parseInt(counterCochon.innerHTML);
-    counterCochon.innerHTML = numCochon - 50;
+  decrementPorc.onclick = () => {
+    const numPorc = parseInt(counterPorc.innerHTML);
+    counterPorc.innerHTML = numPorc - 50;
   }
-
-  let cochonQuantity = localStorage.setItem("cochonQuantity", numCochon)
-  console.log(numCochon)
-  console.log('cochon terminé!')
 
   //JS pour la card poulet
   let incrementPoulet = document.getElementById("btn_increment_poulet");
@@ -60,9 +53,6 @@ export const meatQuantity = () => {
     counterPoulet.innerHTML = numPoulet - 50;
   }
 
-  let pouletQuantity = localStorage.setItem("cochonQuantity", numPoulet)
-  console.log(numPoulet)
-  console.log('poulet terminé!')
 
    //JS pour la card mouton
   let incrementMouton = document.getElementById("btn_increment_mouton");
@@ -81,9 +71,6 @@ export const meatQuantity = () => {
     counterMouton.innerHTML = numMouton - 50;
   }
 
-  let moutonQuantity = localStorage.setItem("moutonQuantity", numMouton)
-  console.log('mouton trené!')
-
    //JS pour la card poisson
    let incrementPoisson = document.getElementById("btn_increment_poisson");
    let decrementPoisson = document.getElementById("btn_decrement_poisson");
@@ -101,9 +88,6 @@ export const meatQuantity = () => {
      counterPoisson.innerHTML = numPoisson  - 50;
    }
 
-   let PoissonQuantity = localStorage.setItem("poissonQuantity", numPoisson )
-   console.log('poisson sauvxsxzé!')
-
    // pour la card vege
    //?
 
@@ -114,12 +98,11 @@ export const meatQuantity = () => {
     const csrf = document.getElementsByName("csrf-token")[0].content
     let dateQuantity = document.getElementById('date-quantity')
     axios.post('/days', {
-      vache: counterVache.textContent,
+      boeuf: counterBoeuf.textContent,
       poulet: counterPoulet.textContent,
-      cochon: counterCochon.textContent,
+      porc: counterPorc.textContent,
       mouton: counterMouton.textContent,
       poisson: counterPoisson.textContent,
-
       day: {date: dateQuantity}
     }, {
       headers: {
@@ -127,7 +110,8 @@ export const meatQuantity = () => {
       }
     })
     .then(function (response) {
-      window.location.assign("/dashboard");
+      window.location.assign(`/days/${response.data.id}`);
+      console.log('hello');
     })
     .catch(function (error) {
       console.log(error);
@@ -135,14 +119,14 @@ export const meatQuantity = () => {
   });
 
     // calcul pour card vegetarien
-    const cardVegetarien = document.querySelector('#card-vegetarien')
-    cardVegetarien.addEventListener('click', () => {
+    const vegetarien = document.querySelector('#card-vegetarien')
+    vegetarien.addEventListener('click', () => {
     const csrf = document.getElementsByName("csrf-token")[0].content
     let dateQuantity = document.getElementById('date-quantity')
     axios.post('/days', {
-      vache: 0,
+      boeuf: 0,
       poulet: 0,
-      cochon: 0,
+      porc: 0,
       mouton: 0,
       poisson: 0,
 

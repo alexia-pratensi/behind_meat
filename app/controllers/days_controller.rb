@@ -1,3 +1,5 @@
+require 'date'
+
 class DaysController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :about, :new, :create, :show]
 
@@ -13,14 +15,15 @@ class DaysController < ApplicationController
 
   def new
     @day = Day.new
-    @conso = Conso.new
-    @meat = Meat.new
   end
 
   def create
     @day = Day.new
     @day.user_id = current_user.id
-    @day.date = Time.now
+    @day.date = @date
+    @date = Date.new
+    @date = Date.find_by(params[:date]).strptime("%m/%d/%Y")
+    @date.save
 
     # @conso.day_id = @conso
     # @conso = Conso.new(conso_params)
@@ -28,13 +31,17 @@ class DaysController < ApplicationController
     # @meat = Meat.new(meat_params)
 
     if @day.save
-      # create_conso
       # if params['poulet'].to_i.positive?
       #   @conso = Conso.new
       #   @conso.quantity = params['poulet'].to_i
       #   @conso.meat_id = Meat.find_by_meat_type('poulet').id
       #   @conso.day_id = @day.id
       # end
+      Meat.pluck(:meat_type).each do |meat|
+        create_conso(meat)
+      end
+      render(json: @day)
+      # create_conso
       #
       # respond_to do |format|
       #   format.html @day.id
@@ -99,11 +106,11 @@ class DaysController < ApplicationController
     return animal_impact_show
   end
 
-  def create_conso
-    meat = Meat.find_by_meat_type(meat)
+  def create_conso(meat)
     @conso = Conso.new
-    @conso.quantity = params[meat.meat_type].to_i
-    @conso.meat_id = meat.id
+    @conso.quantity = params[meat].to_i
+    @conso.meat_id = Meat.find_by_meat_type(meat).id
     @conso.day_id = @day.id
+    @conso.save
   end
 end
