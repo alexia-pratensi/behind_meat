@@ -12,13 +12,12 @@ class DaysController < ApplicationController
     @tree_impact_show = tree_impact_calculator
     @pollution_impact_show = pollution_impact_calculator
 
-    @sum_total = conso_donut('chicken') + conso_donut('beef') + conso_donut('pork') + conso_donut('sheep') + conso_donut('fish')
-    @total_beef = conso_donut('beef') * 100 / @sum_total
-    @total_chicken = conso_donut('chicken') * 100 / @sum_total
-    @total_pork = conso_donut('pork') * 100 / @sum_total
-    @total_sheep = conso_donut('sheep') * 100 / @sum_total
-    @total_fish = conso_donut('fish') * 100 / @sum_total
-
+    # @sum_total = conso_donut('chicken') + conso_donut('beef') + conso_donut('pork') + conso_donut('sheep') + conso_donut('fish')
+    # @total_beef = conso_donut('beef') * 100 / @sum_total
+    # @total_chicken = conso_donut('chicken') * 100 / @sum_total
+    # @total_pork = conso_donut('pork') * 100 / @sum_total
+    # @total_sheep = conso_donut('sheep') * 100 / @sum_total
+    # @total_fish = conso_donut('fish') * 100 / @sum_total
   end
 
   def new
@@ -119,13 +118,12 @@ class DaysController < ApplicationController
     @conso.save
   end
 
-  def conso_donut(meat)
-    @conso = Conso.new
-    @conso.quantity = params[meat].to_i
-    puts params[meat].to_i
-    @conso.meat_id = Meat.find_by_meat_type(meat).id
-    # @conso.day_id = @day.id
-    # @conso.save
-  end
+  # def conso_donut(meat)
+  #   @conso = Conso.new
+  #   @conso.quantity = params[meat].to_i
+  #   puts params[meat].to_i
+  #   @conso.meat_id = Meat.find_by_meat_type(meat).id
+
+  # end
 
 end
