@@ -3,11 +3,11 @@ import Chart from 'chart.js/auto'
 export const donut = () => {
 
   const ctx = document.getElementById('myChart');
-  const totalBeef = ctx.dataset.beef
-  const totalChicken = ctx.dataset.chicken
-  const totalPork = ctx.dataset.pork
-  const totalSheep = ctx.dataset.sheep
-  const totalFish = ctx.dataset.fish
+  const totalBeef = parseInt(ctx.dataset.beef, 10)
+  const totalChicken = parseInt(ctx.dataset.chicken, 10)
+  const totalPork = parseInt(ctx.dataset.pork, 10)
+  const totalSheep = parseInt(ctx.dataset.sheep, 10)
+  const totalFish = parseInt(ctx.dataset.fish, 10)
 
   new Chart(ctx, {
     type: 'doughnut',
