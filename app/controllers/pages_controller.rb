@@ -8,5 +8,6 @@ class PagesController < ApplicationController
     @assos = Asso.all
     @consos = Conso.all
     @days = Day.all
+    @seven_days = Day.first(7)
   end
 end
