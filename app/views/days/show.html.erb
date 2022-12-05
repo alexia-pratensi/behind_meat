@@ -23,7 +23,7 @@
             <div class= 'dash-card-content'>
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805107/water_d8hj6l.png", width: 60, height: 60) %>
-                <p><b>Consommation d'eau</b></p>
+                <p><b>Consommation d'eau douce</b></p>
                 <p> <%= @water_impact_show%> litres </p>
               </div>
             </div>
@@ -33,8 +33,8 @@
             <div class='dash-card-content'>
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/nuage_i0fay8.png", class:'dashboard-pic', width: 60, height: 60 ) %>
-                <p class='titre'><b>Emission carbone</b></p>
-                <p><%= @carbon_impact_show%> cO2</p>
+                <p class='titre'><b>Emission de gaz à effet de serre</b></p>
+                <p><%= @carbon_impact_show%> CO2eq</p>
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/arbre_jfxahv.png", width: 60, height: 60, class:'dashboard-pic') %>
                 <p class='titre'><b>Déforestation</b></p>
-                <p><%= @tree_impact_show%> arbres</p>
+                <p><%= @tree_impact_show%> m²</p>
               </div>
             </div>
           </div>
@@ -52,9 +52,9 @@
           <div class='card card-dashboard'>
             <div class='dash-card-content'>
               <div class='dash-card-text'>
-                <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/cochon_yw40ko.png", width: 60, height: 60, class:'dashboard-pic' ) %>
-                <p class='titre'><b>Souffrance animale</b></p>
-                <p><%= @animal_impact_show%> animaux tués</p>
+                <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1670240319/seaweed_qvnswv.png", width: 50, height: 50, class:'dashboard-pic' ) %>
+                <p class='titre'><b>Pollution de l'eau</b></p>
+                <p><%= @pollution_impact_show%> PO₄eq</p>
               </div>
             </div>
           </div>
