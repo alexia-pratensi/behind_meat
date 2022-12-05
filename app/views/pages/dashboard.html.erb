@@ -67,14 +67,17 @@
 <!-- Conso sur 7 jours - Div 2 -->
 
   <div class='conso-sept'>
-    <h3 class='week-conso'>Ma consommation sur 7 jours</h3>
-    <% @consos.each do | conso | %>
-    <%= conso.quantity %>
+    <h3> Ma consommation sur 7 jours </h3>
+    <div class='week-conso'>
+    <% @seven_days.each do |day| %>
+      <div class='seven-days'>
+      <%= day.consos.pluck(:quantity).sum %>
+    </div>
     <% end %>
+    </div>
   </div>
 
 <!-- APIs -->
-
 
   <div class='dashboard-apis'>
     <div class='dash-api'>

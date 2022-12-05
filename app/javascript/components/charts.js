@@ -12,7 +12,7 @@ export const donut = () => {
       datasets: [{
         label: '%',
         data: [12, 19, 2, 8, 5],
-        borderWidth: 0,
+        borderWidth: 1,
         backgroundColor: ["#ED4D6E","#F07575","#F28E7B", "#F5AD80", "#67ACAC"]
       }],
     },
