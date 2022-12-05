@@ -54,6 +54,17 @@ class DaysController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+
+  def edit
+    @day = Day.find(params[:id])
+  end
+
+  def update
+    @day = Day.find(params[:id])
+
+    @day.update(day_params)
+    redirect_to day_path(@day)
+  end
   end
 
   private
@@ -125,5 +136,8 @@ class DaysController < ApplicationController
   #   @conso.meat_id = Meat.find_by_meat_type(meat).id
 
   # end
+  def day_params
+    params.require(:day).permit(:date)
+  end
 
 end
