@@ -4,11 +4,14 @@
 
 import { application } from "./application"
 
+import DonutController from "./donut_controller"
+application.register("donut", DonutController)
+
 import FlatpickrController from "./flatpickr_controller"
 application.register("flatpickr", FlatpickrController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import DonutController from "./donut_controller"
-application.register("donut", DonutController)
+import PopoverController from "./popover_controller"
+application.register("popover", PopoverController)
