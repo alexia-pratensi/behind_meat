@@ -25,8 +25,8 @@
             <div class= 'dash-card-content'>
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805107/water_d8hj6l.png", width: 60, height: 60) %>
-                <p><b>Consommation d'eau</b></p>
-                <p> 25 Litres</p>
+                <p><b>Consommation d'eau douce</b></p>
+                <p> 25 litres</p>
               </div>
             </div>
           </div>
@@ -35,8 +35,8 @@
             <div class='dash-card-content'>
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/nuage_i0fay8.png", class:'dashboard-pic', width: 60, height: 60 ) %>
-                <p class='titre'><b>Emission carbone</b></p>
-                <p> 18 Co2</p>
+                <p class='titre'><b>Emission gaz à effet de serre</b></p>
+                <p> 18 CO2eq</p>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/arbre_jfxahv.png", width: 60, height: 60, class:'dashboard-pic') %>
                 <p class='titre'><b>Déforestation</b></p>
-                <p> 6 arbres</p>
+                <p> 6 m²</p>
               </div>
             </div>
           </div>
@@ -54,9 +54,9 @@
           <div class='card card-dashboard'>
             <div class='dash-card-content'>
               <div class='dash-card-text'>
-                <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/cochon_yw40ko.png", width: 60, height: 60, class:'dashboard-pic' ) %>
-                <p class='titre'><b>Souffrance animale</b></p>
-                <p> 3 animaux tués</p>
+                <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1670240319/seaweed_qvnswv.png", width: 50, height: 50, class:'dashboard-pic' ) %>
+                <p class='titre'><b>Pollution de l'eau</b></p>
+                <p> 3 PO₄eq</p>
               </div>
             </div>
           </div>
@@ -67,12 +67,17 @@
 <!-- Conso sur 7 jours - Div 2 -->
 
   <div class='conso-sept'>
-    <h3 class='week-conso'>Ma consommation sur 7 jours</h3>
-    <p>Prochainement...</p>
+    <h3> Ma consommation sur 7 jours </h3>
+    <div class='week-conso'>
+    <% @seven_days.each do |day| %>
+      <div class='seven-days'>
+      <%= day.consos.pluck(:quantity).sum %>
+    </div>
+    <% end %>
+    </div>
   </div>
 
 <!-- APIs -->
-
 
   <div class='dashboard-apis'>
     <div class='dash-api'>

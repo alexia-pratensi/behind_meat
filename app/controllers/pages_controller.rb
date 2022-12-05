@@ -6,5 +6,8 @@ class PagesController < ApplicationController
 
   def dashboard
     @assos = Asso.all
+    @consos = Conso.all
+    @days = Day.all
+    @seven_days = Day.first(7)
   end
 end

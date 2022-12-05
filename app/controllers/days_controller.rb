@@ -10,7 +10,7 @@ class DaysController < ApplicationController
     @water_impact_show = water_impact_calculator
     @carbon_impact_show = carbon_impact_calculator
     @tree_impact_show = tree_impact_calculator
-    @animal_impact_show = animal_impact_calculator
+    @pollution_impact_show = pollution_impact_calculator
   end
 
   def new
@@ -96,14 +96,14 @@ class DaysController < ApplicationController
     return tree_impact_show
   end
 
-  def animal_impact_calculator
-    animal_impact_show = 0
+  def pollution_impact_calculator
+    pollution_impact_show = 0
     @day.consos.each do |conso|
-      # conso.meat.animal_impact
+      # conso.meat.pollution_impact
       # conso.quantity
-      animal_impact_show += (conso.quantity * conso.meat.animal_impact) / 1000
+      pollution_impact_show += (conso.quantity * conso.meat.pollution_impact) / 1000
     end
-    return animal_impact_show
+    return pollution_impact_show
   end
 
   def create_conso(meat)

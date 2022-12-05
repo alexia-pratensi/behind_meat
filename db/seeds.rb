@@ -53,12 +53,12 @@ puts "#{Asso.count} assos created"
 
 # Données pour chaque type de viande (inchangeable)
 
-boeuf = Meat.create(meat_type: "boeuf", water_impact: 120, carbon_impact: 130, tree_impact: 4, animal_impact: 3)
-poulet = Meat.create(meat_type: "poulet", water_impact: 25, carbon_impact: 45, tree_impact: 3, animal_impact: 2)
-porc = Meat.create(meat_type: "porc", water_impact: 52, carbon_impact: 70, tree_impact: 4, animal_impact: 3)
-mouton = Meat.create(meat_type: "mouton", water_impact: 30, carbon_impact: 30, tree_impact: 2, animal_impact: 1)
-poisson = Meat.create(meat_type: "poisson", water_impact: 2, carbon_impact: 10, tree_impact: 0, animal_impact: 1)
-vege = Meat.create(meat_type: "vegetarien", water_impact: 0, carbon_impact: 0, tree_impact: 0, animal_impact: 0)
+boeuf = Meat.create(meat_type: "boeuf", water_impact: 1451, carbon_impact: 99.48, tree_impact: 301.41, pollution_impact: 365.29)
+poulet = Meat.create(meat_type: "poulet", water_impact: 660, carbon_impact: 9.87, tree_impact: 12.22, pollution_impact: 48.7)
+porc = Meat.create(meat_type: "porc", water_impact: 1769, carbon_impact: 12.31, tree_impact: 17.36, pollution_impact: 76.38)
+mouton = Meat.create(meat_type: "mouton", water_impact: 1803, carbon_impact: 39.72, tree_impact: 369.81, pollution_impact: 97.13)
+poisson = Meat.create(meat_type: "poisson", water_impact: 3691, carbon_impact: 13.63, tree_impact: 8.41, pollution_impact: 235.12)
+vege = Meat.create(meat_type: "vegetarien", water_impact: 0, carbon_impact: 0, tree_impact: 0, pollution_impact: 0)
 
 puts "#{Meat.count} meats created"
 

@@ -12,8 +12,10 @@ export const donut = () => {
       labels: ['Boeuf', 'Poulet', 'Porc', 'Mouton', 'Poisson'],
       datasets: [{
         label: '%',
+
         data: [counterBoeuf, counterPoulet, counterPorc, counterMouton, counterPoisson],
-        borderWidth: 0,
+        borderWidth: 1,
+
         backgroundColor: ["#ED4D6E","#F07575","#F28E7B", "#F5AD80", "#67ACAC"]
       }],
     },
