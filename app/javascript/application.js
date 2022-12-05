@@ -8,3 +8,8 @@ import "bootstrap"
 //     donut();
 //   }
 // }
+
+
+import {meatQuantity} from './components/meat_quantity'
+
+meatQuantity()

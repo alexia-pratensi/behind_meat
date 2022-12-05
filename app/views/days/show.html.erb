@@ -7,12 +7,12 @@
 <div class='recap-conso'>
   <div class='day-conso'>
     <h2 class='title-conso'>Ma consommation</h2>
-    <canvas id="myChart" data-controller="hello"></canvas>
+    <canvas id="myChart" data-controller="donut" data-beef=<%= @total_beef %> data-chicken=<%= @total_chicken %> data-pork=<%= @total_pork %> data-sheep=<%= @total_sheep %> data-fish=<%= @total_fish %>></canvas>
 <%# <canvas id="myChart" data-meats=<%= @meats.pluck(:name) data-consos = @consos %>
 <%# </canvas> %>
     <div class='dashboard-buttons'>
-      <a class="pink_button btn-dashboard-pink" href="/dashboard">Suivi journalier</a>
       <a class="white_button btn-dashboard-pink" href="#">Modifier ma saisie</a>
+      <a  class="pink_button btn-dashboard-pink" href="/dashboard">Mon suivi</a>
     </div>
   </div>
 

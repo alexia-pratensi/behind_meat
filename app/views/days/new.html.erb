@@ -12,38 +12,33 @@
           <%= f.input :date, as: :string,
                 altInput: true,
                 dateFormat: "DD-MM-YYYY",
-                input_html: { data: { flatpickr_target: "date", id:"date-quantity" } } %>
+                input_html: { data: { flatpickr_target: "date"} } %>
         <% end %>
 
-      <%# <div class='date-form'>
-        <% simple_form_for @day do |f|%>
-          <%# <%=f.input :date, as: :string, class: 'form-control datepicker'%>
-        <%# <%end%>
-      <%# </div>  %>
     <div class="grid-animaux">
-    <%# card vache %>
+    <%# card Boeuf %>
       <div class="card card-form" style="width: 18rem;">
         <h4>Viande de boeuf:</h4>
         <div class="card-body-animal">
-          <button id="btn_decrement_vache" class="button-quantity" type="button" data-controller="hello"> - </button>
+          <button id="btn_decrement_boeuf" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
-            <h5 id="quantity_vache">0 </h5>
+            <h5 id="quantity_boeuf">0 </h5>
           </div>
-          <button id="btn_increment_vache" class="button-quantity" type="button" data-controller="hello"> + </button>
+          <button id="btn_increment_boeuf" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
           <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669935093/Mask_group_ft8exs.png" class="card-img-top" alt="...">
         </div>
         </div>
       </div>
-    <%# card cochon %>
+    <%# card Porc %>
       <div class="card card-form" style="width: 18rem;">
         <h4>Viande de porc:</h4>
         <div class="card-body-animal">
-          <button id="btn_decrement_cochon" class="button-quantity" type="button" data-controller="hello"> - </button>
+          <button id="btn_decrement_porc" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
-            <h5 id="quantity_cochon">0 </h5>
+            <h5 id="quantity_porc">0 </h5>
           </div>
-          <button id="btn_increment_cochon" class="button-quantity" type="button" data-controller="hello"> + </button>
+          <button id="btn_increment_porc" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
           <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669935089/Mask_group-2_iw20ad.png" class="card-img-top" alt="...">
         </div>
@@ -95,19 +90,15 @@
      <div class="card card-form" id="card-vegetarien" style="width: 18rem;">
         <h4>Je n'ai pas mangé de viande aujourd'hui</h4>
         <div class="card-body-animal">
-          <%# <button id="btn_decrement_mouton" class="button-quantity" type="button"> - </button>
-          <div class="input-quantity">
-            <h5 id="quantity_mouton" >0 </h5>
+          <div class="portrait-animaux">
+            <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669973646/broccolii_1_ajolif.png"  alt="vegetarien">
           </div>
-          <button id="btn_increment_mouton" class="button-quantity" type="button"> + </button> %>
-        <div class="portrait-animaux">
-          <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669973646/broccolii_1_ajolif.png"  alt="vegetarien">
-        </div>
         </div>
       </div>
     </div>
       <div id="submit-button" class="btn pink_button">Découvrir mon impact</div>
   </div>
 </div>
+
 
 <%# dans submit = <%=link_to 'voir mon impact', day_path(@day.id)? %>
