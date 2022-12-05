@@ -35,7 +35,7 @@
             <div class='dash-card-content'>
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/nuage_i0fay8.png", class:'dashboard-pic', width: 60, height: 60 ) %>
-                <p class='titre'><b>Emission gaz à effet de serre</b></p>
+                <p class='titre'><b>Emission de gaz à effet de serre</b></p>
                 <p> 18 CO2eq</p>
               </div>
             </div>
@@ -63,6 +63,37 @@
         </div>
   </div>
 </div>
+
+<!-- Compteur animaux tués-->
+
+  <!-- Begin the ADAPTT Kill Counter: -->
+
+          <div class='card compteur-dashboard'>
+            <div class='compteur-card-content'>
+              <div class='compteur-card-text'>
+	            <div class="compteur-animals">
+                <h4 class="compteur-title">Animaux tués dans le monde depuis votre arrivée sur le site...</h4>
+	              <p class="chiffres">
+                🐟 <span id="count0">0</span>&nbsp;animaux marins <br />
+                🐓 <span id="count1">0</span>&nbsp;poulets <br />
+                🦆 <span id="count2">0</span>&nbsp;canards <br />
+                🐖 <span id="count3">0</span>&nbsp;porcs <br />
+                🦃 <span id="count4">0</span>&nbsp;dindes <br />
+                🦆 <span id="count5">0</span>&nbsp;oies <br />
+                🐑 <span id="count6">0</span>&nbsp;moutons <br />
+                🐄 <span id="count7">0</span>&nbsp;vaches et veaux <br /><br>
+                <i>Source adaptt.org</i>
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+	<script>
+		StartKillCounter();
+	</script>
+  </div>
 
 <!-- Conso sur 7 jours - Div 2 -->
 

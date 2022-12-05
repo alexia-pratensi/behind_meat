@@ -14,6 +14,57 @@
     <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
+
+    <%# Compteur animaux  %>
+    <script>
+
+		// Global variables: ___________________________________________________________________
+
+		var counts = [ 0, 0, 0, 0, 0, 0, 0, 0 ];
+		var rate = [ 0, 0, 0, 0, 0, 0, 0, 0 ];
+
+		// Functions: __________________________________________________________________________
+
+		function StartKillCounter() {
+			var millions = [ 90000, 45895, 2262, 1244, 691, 533, 515, 292 ];
+			var perSecond = 8;
+			for (var i = 0; i < counts.length; ++i)
+				rate[i] = millions[i] * 1000000 / 365 / 24 / 60 / 60 / perSecond;
+			setInterval(NewCounts, 1000 / perSecond);
+		}
+
+		function NewCounts() {
+			var num, thous, str;
+			for (var i = 0; i < counts.length; ++i) {
+				counts[i] += rate[i];
+				num = Math.round(counts[i]);
+				str = "";
+				while (num > 1000) {
+					thous = num % 1000;
+					if (thous < 10)
+						thous = "00" + thous;
+					else if (thous < 100)
+						thous = "0" + thous;
+					str = "," + thous + str;
+					num = Math.floor(num / 1000);
+				}
+				str = num + str;
+				document.getElementById("count" + i).innerHTML = str;
+			}
+		}
+    </script>
+
+  <script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-44763726-1', 'adaptt.org');
+		ga('send', 'pageview');
+	</script>
+
+
   </head>
 
   <body>
