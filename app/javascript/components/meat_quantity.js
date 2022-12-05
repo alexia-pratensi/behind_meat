@@ -96,14 +96,14 @@ export const meatQuantity = () => {
   const submitButton = document.querySelector('#submit-button')
   submitButton.addEventListener('click', () => {
     const csrf = document.getElementsByName("csrf-token")[0].content
-    let dateQuantity = document.getElementById('date-quantity')
+    let dateQuantity = document.getElementById('day_date')
     axios.post('/days', {
       boeuf: counterBoeuf.textContent,
       poulet: counterPoulet.textContent,
       porc: counterPorc.textContent,
       mouton: counterMouton.textContent,
       poisson: counterPoisson.textContent,
-      day: {date: dateQuantity}
+      day: {date: dateQuantity.value}
     }, {
       headers: {
         'X-CSRF-Token': csrf
@@ -122,7 +122,7 @@ export const meatQuantity = () => {
     const vegetarien = document.querySelector('#card-vegetarien')
     vegetarien.addEventListener('click', () => {
     const csrf = document.getElementsByName("csrf-token")[0].content
-    let dateQuantity = document.getElementById('date-quantity')
+    let dateQuantity = document.getElementById('day_date')
     axios.post('/days', {
       boeuf: 0,
       poulet: 0,
@@ -130,7 +130,7 @@ export const meatQuantity = () => {
       mouton: 0,
       poisson: 0,
 
-      day: {date: dateQuantity}
+      day: {date: dateQuantity.value}
     }, {
       headers: {
         'X-CSRF-Token': csrf

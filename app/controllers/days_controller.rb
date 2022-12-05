@@ -1,7 +1,7 @@
 require 'date'
 
 class DaysController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :about, :new, :create, :show]
+  skip_before_action :authenticate_user!, only: [:home, :about]
 
   def show
     @assos = Asso.all
@@ -11,6 +11,11 @@ class DaysController < ApplicationController
     @carbon_impact_show = carbon_impact_calculator
     @tree_impact_show = tree_impact_calculator
     @pollution_impact_show = pollution_impact_calculator
+    @total_beef =  ?* 100 / somme
+    @total_chicken = 40
+    @total_pork = 40
+    @total_sheep = 40
+    @total_fish = 40
   end
 
   def new
@@ -20,11 +25,8 @@ class DaysController < ApplicationController
   def create
     @day = Day.new
     @day.user_id = current_user.id
+    @date = Date.parse(params[:day][:date])
     @day.date = @date
-    @date = Date.new
-    @date = Date.find_by(params[:date]).strptime("%m/%d/%Y")
-    @date.save
-
     # @conso.day_id = @conso
     # @conso = Conso.new(conso_params)
     # @conso.meat_id = @meat

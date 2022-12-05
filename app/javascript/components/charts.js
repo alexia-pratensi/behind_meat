@@ -1,9 +1,13 @@
 import Chart from 'chart.js/auto'
-import { counterBoeuf, counterPoulet, counterPorc, counterMouton, counterPoisson } from "/meat_quantity";
 
 export const donut = () => {
 
   const ctx = document.getElementById('myChart');
+  const totalBeef = ctx.dataset.beef
+  const totalChicken = ctx.dataset.chicken
+  const totalPork = ctx.dataset.pork
+  const totalSheep = ctx.dataset.sheep
+  const totalFish = ctx.dataset.fish
 
   new Chart(ctx, {
     type: 'doughnut',
@@ -12,10 +16,8 @@ export const donut = () => {
       labels: ['Boeuf', 'Poulet', 'Porc', 'Mouton', 'Poisson'],
       datasets: [{
         label: '%',
-
-        data: [counterBoeuf, counterPoulet, counterPorc, counterMouton, counterPoisson],
+        data: [totalBeef, totalChicken, totalPork, totalSheep, totalFish],
         borderWidth: 1,
-
         backgroundColor: ["#ED4D6E","#F07575","#F28E7B", "#F5AD80", "#67ACAC"]
       }],
     },
