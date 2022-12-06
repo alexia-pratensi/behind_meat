@@ -3,6 +3,7 @@ import Chart from 'chart.js/auto'
 export const donut = () => {
 
   const ctx = document.getElementById('myChart');
+  // const ref = useRef();
 
   if (ctx) {
     const totalBeef = parseInt(ctx.dataset.beef, 10)
@@ -36,5 +37,13 @@ export const donut = () => {
         },
       },
     });
+    // setTimeout(() => {
+    //   test.destroy()
+    // }, 7000);
+    // window.addEventListener('onbeforeunload', () => {
+    //   alert('hi')
+    //   test.destroy()
+    //   test = null;
+    // })
   }
 }
