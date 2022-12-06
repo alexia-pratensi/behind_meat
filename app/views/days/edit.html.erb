@@ -1,0 +1,107 @@
+<div class="div-general-form d-flex">
+  <div class="div-text-form">
+      <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669939897/ombre_gs8dck.png" alt="ombre" class="ombre">
+     <p class="saviez-vous">Saviez-vous que...</p>
+     <p class="text-saviez-vous">La plus grande association de nutritionnistes au monde, l'ADA (Association de Diététique Américaine) a approuvé depuis 1987 les régimes végétariens et végans, qu'ils soient suivis par un enfant, une femme enceinte, un sportif ou une personne âgée.</p>
+  </div>
+  <div class="container-form-quantity">
+
+    <h2>Quelle quantité de viande avez-vous consommé aujourd'hui ? (en gramme)</h2>
+
+        <%= simple_form_for @day, data: { controller: 'flatpickr' } do |f| %>
+          <%= f.input :date, as: :string,
+                altInput: true,
+                dateFormat: "DD-MM-YYYY",
+                input_html: { data: { flatpickr_target: "date"} } %>
+
+        <% end %>
+
+    <div class="grid-animaux">
+    <%# card Boeuf %>
+      <div class="card card-form" style="width: 18rem;">
+        <h4>Viande de boeuf:</h4>
+        <div class="card-body-animal">
+          <button id="btn_decrement_boeuf" class="button-quantity" type="button" data-controller="hello"> - </button>
+          <div class="input-quantity">
+            <h5 id="quantity_boeuf"> <%=@boeuf%></h5>
+          </div>
+          <button id="btn_increment_boeuf" class="button-quantity" type="button" data-controller="hello"> + </button>
+        <div class="portrait-animaux">
+          <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669935093/Mask_group_ft8exs.png" class="card-img-top" alt="...">
+        </div>
+        </div>
+      </div>
+    <%# card Porc %>
+      <div class="card card-form" style="width: 18rem;">
+        <h4>Viande de porc:</h4>
+        <div class="card-body-animal">
+          <button id="btn_decrement_porc" class="button-quantity" type="button" data-controller="hello"> - </button>
+          <div class="input-quantity">
+            <h5 id="quantity_porc"><%= @porc %> </h5>
+          </div>
+          <button id="btn_increment_porc" class="button-quantity" type="button" data-controller="hello"> + </button>
+        <div class="portrait-animaux">
+          <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669935089/Mask_group-2_iw20ad.png" class="card-img-top" alt="...">
+        </div>
+        </div>
+      </div>
+    <%# card poulet %>
+      <div class="card card-form" style="width: 18rem;">
+         <h4>Viande de volaile:</h4>
+        <div class="card-body-animal">
+          <button id="btn_decrement_poulet" class="button-quantity" type="button" data-controller="hello"> - </button>
+          <div class="input-quantity">
+            <h5 id="quantity_poulet"><%= @poulet %> </h5>
+          </div>
+          <button id="btn_increment_poulet" class="button-quantity" type="button" data-controller="hello"> + </button>
+        <div class="portrait-animaux">
+          <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669935089/Mask_group-1_qsfg1e.png" class="card-img-top" alt="...">
+        </div>
+        </div>
+      </div>
+    <%# card mouton %>
+      <div class="card card-form" style="width: 18rem;">
+        <h4>Viande de mouton:</h4>
+        <div class="card-body-animal">
+          <button id="btn_decrement_mouton" class="button-quantity" type="button" data-controller="hello"> - </button>
+          <div class="input-quantity">
+            <h5 id="quantity_mouton" ><%= @mouton %> </h5>
+          </div>
+          <button id="btn_increment_mouton" class="button-quantity" type="button" data-controller="hello"> + </button>
+        <div class="portrait-animaux">
+          <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669935089/Mask_group-3_z3mfdc.png"  alt="...">
+        </div>
+        </div>
+      </div>
+    <%# card poisson%>
+    <div class="card card-form" style="width: 18rem;">
+        <h4>Viande de poisson:</h4>
+        <div class="card-body-animal">
+          <button id="btn_decrement_poisson" class="button-quantity" type="button" data-controller="hello"> - </button>
+          <div class="input-quantity">
+            <h5 id="quantity_poisson" ><%= @poisson %> </h5>
+          </div>
+          <button id="btn_increment_poisson" class="button-quantity" type="button" data-controller="hello"> + </button>
+        <div class="portrait-animaux">
+          <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669973646/fish_1_jawcyg.png"  alt="poisson">
+        </div>
+        </div>
+      </div>
+    <%# card végétarien%>
+    <%# <%= link_to dashboard_path do %>
+     <div class="card card-form" id="card-vegetarien" style="width: 18rem;">
+        <h4>Je n'ai pas mangé de viande aujourd'hui</h4>
+        <div class="card-body-animal">
+          <div class="portrait-animaux">
+            <img src="https://res.cloudinary.com/dwvsbgwap/image/upload/v1669973646/broccolii_1_ajolif.png"  alt="vegetarien">
+          </div>
+        </div>
+      </div>
+    <%# <% end %>
+    </div>
+      <div id="submit-button" class="btn pink_button">Découvrir mon impact</div>
+  </div>
+</div>
+
+
+<%# dans submit = <%=link_to 'voir mon impact', day_path(@day.id)? %>
