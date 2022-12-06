@@ -20,8 +20,6 @@ export const meatQuantity = () => {
       counterBoeuf.innerHTML = numBoeuf - 50;
     }
 
-
-
     //JS pour la card Porc
     let incrementPorc = document.getElementById("btn_increment_porc");
     let decrementPorc = document.getElementById("btn_decrement_porc");
