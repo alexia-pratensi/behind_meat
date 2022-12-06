@@ -9,7 +9,7 @@
 <div class='recap-conso'>
   <div class='day-conso'>
     <h2 class='title-conso'>Ma dernière consommation</h2>
-    <canvas id="myChart" data-controller="donut"></canvas>
+    <canvas id="myChart" data-controller="donut" data-beef=<%= @boeuf_percent %> data-chicken=<%= @chicken_percent %> data-pork=<%= @pork_percent %> data-sheep=<%= @sheep_percent %> data-fish=<%= @fish_percent %>></canvas></canvas>
 <%# <canvas id="myChart" data-meats=<%= @meats.pluck(:name) data-consos = @consos %>
 <%# </canvas> %>
     <div class='dashboard-buttons'>
@@ -91,18 +91,58 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
   </div>
   </div>
 
+
 <!-- Conso sur 7 jours - Div 2 -->
 
   <div class='conso-sept'>
     <h3> Ma consommation sur 7 jours </h3>
     <div class='week-conso'>
     <% @seven_days.each do |day| %>
-      <div class='seven-days'>
-      <%= day.consos.pluck(:quantity).sum %>
-    </div>
+    <% if day.consos.pluck(:quantity).sum == 0 %>
+      <div class='seven-days-green'>
+        <%= day.consos.pluck(:quantity).sum %> g
+      </div>
+    <% elsif day.consos.pluck(:quantity).sum != nil %>
+      <div class='seven-days-orange'>
+        <%= day.consos.pluck(:quantity).sum %> g
+      </div>
+      <% elsif day.consos.pluck(:quantity).sum == nil %>
+      <div class='seven-days-grey'>
+        <%= day.consos.pluck(:quantity).sum %>
+      </div>
     <% end %>
+    <% end %>
+    <!-- Compteur animaux tués-->
+
+              <div class='card compteur-dashboard'>
+                <div class='compteur-card-content'>
+                  <div class='compteur-card-text'>
+                  <div class="compteur-animals">
+                    <h4 class="compteur-title">Animaux tués dans le monde depuis votre arrivée sur le site...</h4>
+                    <p class="chiffres">
+                    🐟 <span id="count0">0</span>&nbsp;animaux marins <br />
+                    🐓 <span id="count1">0</span>&nbsp;poulets <br />
+                    🦆 <span id="count2">0</span>&nbsp;canards <br />
+                    🐖 <span id="count3">0</span>&nbsp;porcs <br />
+                    🦃 <span id="count4">0</span>&nbsp;dindes <br />
+                    🦆 <span id="count5">0</span>&nbsp;oies <br />
+                    🐑 <span id="count6">0</span>&nbsp;moutons <br />
+                    🐄 <span id="count7">0</span>&nbsp;vaches et veaux <br /><br>
+                    <i>Source adaptt.org</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+
+      <script>
+        StartKillCounter();
+      </script>
+      </div>
     </div>
   </div>
+
 
 <!-- APIs -->
 
