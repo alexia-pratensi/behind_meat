@@ -13,6 +13,7 @@ class PagesController < ApplicationController
 
     # Consommation de boeuf
     # @days.where(user.id == current_user.id)
+
     @boeuf_total_conso = @consos.where(meat_id: Meat.find_by_meat_type('boeuf')).pluck(:quantity).sum
     @boeuf_percent = (@boeuf_total_conso.to_f / @day_total_conso.to_f * 100).round(2)
 
