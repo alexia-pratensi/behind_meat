@@ -106,7 +106,7 @@ class DaysController < ApplicationController
       # conso.quantity
       water_impact_show += (conso.quantity * conso.meat.water_impact) / 1000
     end
-    return water_impact_show
+    return water_impact_show.round(2)
   end
 
   def carbon_impact_calculator
@@ -116,7 +116,7 @@ class DaysController < ApplicationController
       # conso.quantity
       carbon_impact_show += (conso.quantity * conso.meat.carbon_impact) / 1000
     end
-    return carbon_impact_show
+    return carbon_impact_show.round(2)
   end
 
   def tree_impact_calculator
@@ -126,7 +126,7 @@ class DaysController < ApplicationController
       # conso.quantity
       tree_impact_show += (conso.quantity * conso.meat.tree_impact) / 1000
     end
-    return tree_impact_show
+    return tree_impact_show.round(2)
   end
 
   def pollution_impact_calculator
@@ -136,7 +136,7 @@ class DaysController < ApplicationController
       # conso.quantity
       pollution_impact_show += (conso.quantity * conso.meat.pollution_impact) / 1000
     end
-    return pollution_impact_show
+    return pollution_impact_show.round(2)
   end
 
   def create_conso(meat)
