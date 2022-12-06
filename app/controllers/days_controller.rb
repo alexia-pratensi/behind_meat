@@ -57,6 +57,26 @@ class DaysController < ApplicationController
 
   def edit
     @day = Day.find(params[:id])
+    @boeuf = 0
+    @poulet = 0
+    @porc = 0
+    @poisson = 0
+    @mouton = 0
+    @day.consos.each do |conso|
+      case conso.meat.meat_type
+      when "boeuf"
+        @boeuf += conso.quantity
+      when "poulet"
+        @poulet += conso.quantity
+      when "porc"
+        @porc += conso.quantity
+      when "poisson"
+        @poisson += conso.quantity
+      when "mouton"
+        @mouton += conso.quantity
+      end
+    end
+
   end
 
   def update

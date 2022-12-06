@@ -13,6 +13,7 @@
                 altInput: true,
                 dateFormat: "DD-MM-YYYY",
                 input_html: { data: { flatpickr_target: "date"} } %>
+
         <% end %>
 
     <div class="grid-animaux">
@@ -22,7 +23,7 @@
         <div class="card-body-animal">
           <button id="btn_decrement_boeuf" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
-            <h5 id="quantity_boeuf">0 </h5>
+            <h5 id="quantity_boeuf"> <%=@boeuf%></h5>
           </div>
           <button id="btn_increment_boeuf" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
@@ -36,7 +37,7 @@
         <div class="card-body-animal">
           <button id="btn_decrement_porc" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
-            <h5 id="quantity_porc">0 </h5>
+            <h5 id="quantity_porc"><%= @porc %> </h5>
           </div>
           <button id="btn_increment_porc" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
@@ -50,7 +51,7 @@
         <div class="card-body-animal">
           <button id="btn_decrement_poulet" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
-            <h5 id="quantity_poulet">0 </h5>
+            <h5 id="quantity_poulet"><%= @poulet %> </h5>
           </div>
           <button id="btn_increment_poulet" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
@@ -64,7 +65,7 @@
         <div class="card-body-animal">
           <button id="btn_decrement_mouton" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
-            <h5 id="quantity_mouton" >0 </h5>
+            <h5 id="quantity_mouton" ><%= @mouton %> </h5>
           </div>
           <button id="btn_increment_mouton" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
@@ -78,7 +79,7 @@
         <div class="card-body-animal">
           <button id="btn_decrement_poisson" class="button-quantity" type="button" data-controller="hello"> - </button>
           <div class="input-quantity">
-            <h5 id="quantity_poisson" >0 </h5>
+            <h5 id="quantity_poisson" ><%= @poisson %> </h5>
           </div>
           <button id="btn_increment_poisson" class="button-quantity" type="button" data-controller="hello"> + </button>
         <div class="portrait-animaux">
@@ -87,6 +88,7 @@
         </div>
       </div>
     <%# card végétarien%>
+    <%# <%= link_to dashboard_path do %>
      <div class="card card-form" id="card-vegetarien" style="width: 18rem;">
         <h4>Je n'ai pas mangé de viande aujourd'hui</h4>
         <div class="card-body-animal">
@@ -95,6 +97,7 @@
           </div>
         </div>
       </div>
+    <%# <% end %>
     </div>
       <div id="submit-button" class="btn pink_button">Découvrir mon impact</div>
   </div>
