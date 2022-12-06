@@ -13,8 +13,8 @@
 <%# <canvas id="myChart" data-meats=<%= @meats.pluck(:name) data-consos = @consos %>
 <%# </canvas> %>
     <div class='dashboard-buttons'>
+      <%= link_to "Modifier ma saisie", edit_day_path(@day), class: "white_button btn-dashboard-pink" %>
       <a class="pink_button btn-dashboard-pink" href="/days/new">Ajouter une journée</a>
-      <a class="white_button btn-dashboard-pink" href="#">Modifier ma saisie</a>
     </div>
   </div>
 
