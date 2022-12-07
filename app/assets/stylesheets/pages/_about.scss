@@ -5,16 +5,25 @@
   font-family: 'Epilogue', sans-serif;
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  background-image: url('https://res.cloudinary.com/dwvsbgwap/image/upload/v1670406925/teamphoto2_pmq4rp.jpg');
-  height: 600px
+  // padding: 70px 0;
+  // background-image: url('https://res.cloudinary.com/dwvsbgwap/image/upload/v1670413616/phototeam_ongvde.png');
+  // height: 405px;
+  // margin-top: 100px;
+  border: 1px solid #C65759;
+  border-radius: 10px;
+
+  h3 {
+    padding: 60px;
+
+  }
+
 
 }
 
 .about-details {
   font-family: 'Epilogue', sans-serif;
   // margin: 50px;
-h2 {
+h1 {
   color: #C65759;
 }
 p{
@@ -39,13 +48,14 @@ p{
   text-justify: right;
 }
 
-.about-source {
+.about-sources {
   align-items: center;
   justify-content: right;
   margin-bottom: 50px;
   margin-top: 50px;
   text-align: left;
   text-justify: left;
+
 }
 
 .btn-about {
