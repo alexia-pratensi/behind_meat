@@ -72,7 +72,7 @@ day5 = Day.create(date: 20221126, user: user1)
 day6 = Day.create(date: 20221127, user: user1)
 day7 = Day.create(date: 20221128, user: user1)
 day8 = Day.create(date: 20221130, user: user1)
-day9 = Day.create(date: 20221131, user: user1)
+day9 = Day.create(date: 20221201, user: user1)
 
 puts "#{Day.count} days created"
 
