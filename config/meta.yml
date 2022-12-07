@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Behind Meat"
+meta_title: "Behind Meat - Découvrez l'impact écologique de votre consommation de viande"
+meta_description: "Behind Meat vous propose de calculer votre impact écologique selon votre consommation de viande, et de garder un suivi au long terme"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@BehindMeatinfo"   # required for Twitter Cards
