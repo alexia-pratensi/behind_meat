@@ -4,9 +4,6 @@
 
 import { application } from "./application"
 
-// import CounterAnimalsController from "./counter_animals_controller"
-// application.register("counter-animals", CounterAnimalsController)
-
 import DonutController from "./donut_controller"
 application.register("donut", DonutController)
 
@@ -18,3 +15,6 @@ application.register("hello", HelloController)
 
 import PopoverController from "./popover_controller"
 application.register("popover", PopoverController)
+
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)
