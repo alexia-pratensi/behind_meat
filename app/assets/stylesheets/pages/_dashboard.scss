@@ -12,9 +12,7 @@
 
   .recap-conso {
     display: flex;
-    // margin-left: 10px;
-    margin-bottom: 20px;
-    height: 600px;
+    height: 475px;
     width: 100%;
     .day-conso {
       border-right: 2px solid #C65759;
@@ -30,17 +28,6 @@
         padding-left: 20px;
         color: #C65759;
       }
-      .dashboard-buttons {
-        display: flex;
-        justify-content: space-between;
-        padding: 16px;
-      .btn-dashboard-pink {
-        margin-top: 50px;
-        width: 220px;
-        height: 55px;
-        text-decoration: none;
-      }
-    }
     }
   }
 
@@ -156,12 +143,13 @@
       font-size: 30px;
       line-height: 40px;
       color: #C65759;
-      margin-bottom: 30px;
+      margin-bottom: auto;
     }
     .week-conso {
       display: flex;
       justify-content: space-between;
-      width: 70%;
+      align-items: baseline;
+      width: 100%;
       .seven-days-green {
         box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
         background-color: #1C8D8D66;
@@ -213,6 +201,17 @@
         align-items: center;
         text-align: center;
         padding: 20px;
+      }
+      .dashboard-buttons {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        .btn-dashboard-pink {
+          margin-top: 50px;
+          width: 220px;
+          height: 55px;
+          text-decoration: none;
+        }
       }
     }
   }
