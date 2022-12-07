@@ -99,7 +99,7 @@
 
     .compteur-dashboard {
         font-family: 'DM Sans';
-        box-shadow: 0px 4px 50px rgba(224, 224, 224, 0.25);
+        // box-shadow: 0px 4px 50px rgba(224, 224, 224, 0.25);
         border-radius: 10px;
         justify-content: center;
         border: none;
@@ -110,9 +110,9 @@
         flex-direction: row;
         display: flex;
         align-items: center;
-        &:hover{
-          box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-        }
+        // &:hover{
+        //   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+        // }
         .compteur-card-content{
           display:flex;
           .compteur-card-text {
@@ -138,6 +138,7 @@
       font-size: 30px;
       line-height: 40px;
       color: #C65759;
+      margin-bottom: 30px;
     }
     .week-conso {
       display: flex;
