@@ -3,6 +3,11 @@
   min-height: calc(100vh - 116px);
   max-width: 1600px;
 
+  h1.bonjour-name {
+    color: #67ACAC;
+    font-weight: bold;
+  }
+
   // Recap de la dernière conso- Div 1
 
   .recap-conso {
@@ -86,6 +91,7 @@
           padding: 2%;
           text-align: center;
           justify-content: center;
+          align-items: center;
           p.titre {
             margin-bottom: 0px;
           }
@@ -94,6 +100,8 @@
             font-size: large;
             width: 150px;
             text-align: center;
+            align-items: center;
+            justify-content: center;
           }
         }
       }

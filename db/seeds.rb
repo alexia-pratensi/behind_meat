@@ -12,7 +12,7 @@ User.destroy_all
 Meat.destroy_all
 Asso.destroy_all
 
-user1 = User.create!(email: "user1@gmail.com", password: 'password', name: 'Toto')
+user1 = User.create!(email: "user1@gmail.com", password: 'password', name: 'Alexia')
 user2 = User.create!(email: "user2@gmail.com", password: 'password', name: 'Titi')
 
 puts "#{User.count} users created"
@@ -71,28 +71,30 @@ day4 = Day.create(date: 20221125, user: user1)
 day5 = Day.create(date: 20221126, user: user1)
 day6 = Day.create(date: 20221127, user: user1)
 day7 = Day.create(date: 20221128, user: user1)
+day8 = Day.create(date: 20221130, user: user1)
+day9 = Day.create(date: 20221131, user: user1)
 
 puts "#{Day.count} days created"
 
 # Lundi (day1), toto mange 2 conso (conso1 et conso2), ce qui donne 600g de boeuf et 200g de poulet
 
-conso1 = Conso.create(quantity: 600, meat: boeuf, day: day1)
+conso1 = Conso.create(quantity: 300, meat: boeuf, day: day1)
 conso2 = Conso.create(quantity: 200, meat: poulet, day: day1)
 
 # Mardi (day2), toto mange 2 conso (conso3 et conso4), ce qui donne 400g de porc et 150g de mouton
 
-conso3 = Conso.create(quantity: 400, meat: porc, day: day2)
+conso3 = Conso.create(quantity: 250, meat: porc, day: day2)
 conso4 = Conso.create(quantity: 150, meat: mouton, day: day2)
 
 # Mercredi (day3), toto mange 1 conso (conso5), ce qui donne 800g de poisson sur la journée.
-conso5 = Conso.create(quantity: 800, meat: poisson, day: day3)
+conso5 = Conso.create(quantity: 450, meat: poisson, day: day3)
 
 # Jeudi (day4), toto ne mange pas de viande du tout
 conso6 = Conso.create(quantity: 0, meat: vege, day: day4)
 
 # Vendredi (day5), toto mange 3 conso (conso 7, 8 et 9), ce qui donne 300g de poulet, 200g de boeuf et 200g de poisson
-conso7 = Conso.create(quantity: 300, meat: poulet, day: day5)
-conso8 = Conso.create(quantity: 200, meat: boeuf, day: day5)
+conso7 = Conso.create(quantity: 100, meat: poulet, day: day5)
+conso8 = Conso.create(quantity: 125, meat: boeuf, day: day5)
 conso9 = Conso.create(quantity: 200, meat: poisson, day: day5)
 
 # Samedi (day6), toto ne mange pas de viande
@@ -101,5 +103,13 @@ conso10 = Conso.create(quantity: 0, meat: vege, day: day6)
 # Dimanche (day7), toto mange peu de viande, 100g de poulet
 
 conso11 = Conso.create(quantity: 100, meat: poulet, day: day7)
+
+# (day8), toto mange un steak haché de boeuf
+
+conso12 = Conso.create(quantity: 125, meat: boeuf, day: day8)
+
+# day9, toto ne mange pas de viande
+
+conso13 = Conso.create(quantity: 0, meat: vege, day: day9)
 
 puts "#{Conso.count} consos created"
