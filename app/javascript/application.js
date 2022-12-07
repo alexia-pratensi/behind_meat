@@ -9,7 +9,7 @@ import { animalsDeath } from "./components/animals_death";
 import Rails from "@rails/ujs";
 import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
-import { donuttwo } from "./components/chartstwo";
+// import { donuttwo } from "./components/chart";
 
 Rails.start();
 Turbolinks.start();
@@ -18,6 +18,6 @@ ActiveStorage.start();
 document.addEventListener("turbolinks:load", function () {
   meatQuantity()
   donut()
-  donuttwo()
+  // donuttwo()
   // animalsDeath()
 });
