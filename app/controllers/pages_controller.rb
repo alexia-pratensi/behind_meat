@@ -15,32 +15,32 @@ class PagesController < ApplicationController
     # @days.where(user.id == current_user.id)
 
     @beef_total_conso = @consos.where(meat_id: Meat.find_by_meat_type('boeuf')).pluck(:quantity).sum
-    @user_total_beef_conso = @consos.pluck(:quantity).sum
-    @beef_percent = (@beef_total_conso.to_f / @user_total_beef_conso.to_f * 100).round(2)
+    @user_total_conso = @consos.pluck(:quantity).sum
+    @beef_percent = (@beef_total_conso.to_f / @user_total_conso.to_f * 100).round(2)
 
     # Consommation de poulet
 
     @chicken_total_conso = @consos.where(meat_id: Meat.find_by_meat_type('poulet')).pluck(:quantity).sum
-    @user_total_beef_conso = @consos.pluck(:quantity).sum
-    @chicken_percent = (@chicken_total_conso.to_f / @user_total_beef_conso.to_f * 100).round(2)
+    @user_total_conso = @consos.pluck(:quantity).sum
+    @chicken_percent = (@chicken_total_conso.to_f / @user_total_conso.to_f * 100).round(2)
 
     # Consommation de porc
 
     @pork_total_conso = @consos.where(meat_id: Meat.find_by_meat_type('porc')).pluck(:quantity).sum
-    @user_total_beef_conso = @consos.pluck(:quantity).sum
-    @pork_percent = (@pork_total_conso.to_f / @user_total_beef_conso.to_f * 100).round(2)
+    @user_total_conso = @consos.pluck(:quantity).sum
+    @pork_percent = (@pork_total_conso.to_f / @user_total_conso.to_f * 100).round(2)
 
     # Consommation de mouton
 
-    @sheep_total_conso = @consos.where(meat_id: Meat.find_by_meat_type('sheep')).pluck(:quantity).sum
-    @user_total_beef_conso = @consos.pluck(:quantity).sum
-    @sheep_percent = (@sheep_total_conso.to_f / @user_total_beef_conso.to_f * 100).round(2)
+    @sheep_total_conso = @consos.where(meat_id: Meat.find_by_meat_type('mouton')).pluck(:quantity).sum
+    @user_total_conso = @consos.pluck(:quantity).sum
+    @sheep_percent = (@sheep_total_conso.to_f / @user_total_conso.to_f * 100).round(2)
 
     # Consommation de poisson
 
-    @fish_total_conso = @consos.where(meat_id: Meat.find_by_meat_type('fish')).pluck(:quantity).sum
-
-  
+    @fish_total_conso = @consos.where(meat_id: Meat.find_by_meat_type('poisson')).pluck(:quantity).sum
+    @user_total_conso = @consos.pluck(:quantity).sum
+    @fish_percent = (@fish_total_conso.to_f / @user_total_conso.to_f * 100).round(2)
 
     @saviez_vous = text_saviez_vous.sample
   end
@@ -56,9 +56,5 @@ class PagesController < ApplicationController
     "En France, 95 % des cochons sont élevés de manière intensive, sans accès à l’extérieur et le plus souvent isolés (truies reproductrices), ou confinés en grand nombre dans de petits espaces (cochons élevés pour leur chair).",
     "En France, la grande majorité des poulets sont enfermés toute leur vie en bâtiment, sans accès à l’extérieur. Les densités atteignent 22 oiseaux par mètre carré dans les élevages standards, soit moins d’une feuille A4 d’espace par poulet...",
     "Les moutons sont très intelligents. Bien plus intelligents que ce qu’on a pu penser. Sur des tâches comparables, leurs performances sont équivalentes à celles d’un singe." ]
-
-    @user_total_beef_conso = @consos.pluck(:quantity).sum
-    @fish_percent = (@fish_total_conso.to_f / @user_total_beef_conso.to_f * 100).round(2)
-
   end
 end
