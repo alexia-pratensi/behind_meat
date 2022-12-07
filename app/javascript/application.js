@@ -18,6 +18,7 @@ ActiveStorage.start();
 document.addEventListener("turbolinks:load", function () {
   meatQuantity()
   donut()
+
   // donuttwo()
   // animalsDeath()
 });
