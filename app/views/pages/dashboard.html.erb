@@ -2,7 +2,7 @@
 
 <div class='dashboard-container'>
 <br>
-  <h1><b>Bonjour <%=current_user.name%>,</b></h1>
+  <h1 class='bonjour-name'><b>Bonjour <%=current_user.name%>,</b></h1>
 
 <!-- Conso générale Div 1 -->
 
@@ -26,7 +26,7 @@
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805107/water_d8hj6l.png", width: 60, height: 60) %>
                 <p><b>Consommation d'eau douce</b></p>
-                <p> <%= @water_impact_dashboard %> litres</p>
+                <p class='resultat-chiffre'> <%= @water_impact_dashboard %> litres</p>
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@ C'est à dire que les gaz autres que le CO2 sont mesurés par la quantité de re
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/nuage_i0fay8.png", class:'dashboard-pic', width: 60, height: 60 ) %>
                 <p class='titre'><b>Emission de gaz à effet de serre</b></p>
-                <p> <%= @carbon_impact_dashboard %> CO2eq</p>
+                <p class='resultat-chiffre'> <%= @carbon_impact_dashboard %> CO2eq</p>
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@ C'est à dire que les gaz autres que le CO2 sont mesurés par la quantité de re
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/arbre_jfxahv.png", width: 60, height: 60, class:'dashboard-pic') %>
                 <p class='titre'><b>Déforestation</b></p>
-                <p> <%= @tree_impact_dashboard %> m²</p>
+                <p class='resultat-chiffre'> <%= @tree_impact_dashboard %> m²</p>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1670240319/seaweed_qvnswv.png", width: 50, height: 50, class:'dashboard-pic' ) %>
                 <p class='titre'><b>Pollution de l'eau</b></p>
-                <p> <%= @pollution_impact_dashboard %> PO₄eq</p>
+                <p class='resultat-chiffre'> <%= @pollution_impact_dashboard %> PO₄eq</p>
               </div>
             </div>
           </div>
@@ -76,6 +76,10 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
       <div class='seven-days-green'>
         <%= day.consos.pluck(:quantity).sum %> g
       </div>
+    <% elsif day.consos.pluck(:quantity).sum > 150 %>
+      <div class='seven-days-red'>
+        <%= day.consos.pluck(:quantity).sum %> g
+      </div>
     <% elsif day.consos.pluck(:quantity).sum != nil %>
       <div class='seven-days-orange'>
         <%= day.consos.pluck(:quantity).sum %> g
@@ -85,7 +89,7 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
         <%= day.consos.pluck(:quantity).sum %>
       </div>
     <% end %>
-    <% end %>
+  <% end %>
 
 
       </div>

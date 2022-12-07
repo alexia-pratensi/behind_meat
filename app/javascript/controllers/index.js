@@ -7,9 +7,6 @@ import { application } from "./application"
 import DonutController from "./donut_controller"
 application.register("donut", DonutController)
 
-import DonuttwoController from "./donuttwo_controller"
-application.register("donuttwo", DonuttwoController)
-
 import FlatpickrController from "./flatpickr_controller"
 application.register("flatpickr", FlatpickrController)
 

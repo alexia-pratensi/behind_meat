@@ -8,7 +8,7 @@ class PagesController < ApplicationController
     @assos = Asso.all
     @consos = current_user.consos
     @days = Day.where(user_id: current_user.id)
-    @seven_days = @days.first(7)
+    @seven_days = @days.last(7)
     @last_day = @days.last
 
     # Consommation de boeuf
