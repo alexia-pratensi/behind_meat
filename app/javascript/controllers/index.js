@@ -4,11 +4,14 @@
 
 import { application } from "./application"
 
+import CounterAnimalsController from "./counter_animals_controller"
+application.register("counter-animals", CounterAnimalsController)
+
 import DonutController from "./donut_controller"
 application.register("donut", DonutController)
 
-// import DonuttwoController from "./donuttwo_controller"
-// application.register("donuttwo", DonuttwoController)
+import DonuttwoController from "./donuttwo_controller"
+application.register("donuttwo", DonuttwoController)
 
 import FlatpickrController from "./flatpickr_controller"
 application.register("flatpickr", FlatpickrController)
