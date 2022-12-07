@@ -39,8 +39,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  a {
+  a:link {
       margin: 10px !important;
+      text-decoration: none;
   }
 }
 .cochon-btn {
