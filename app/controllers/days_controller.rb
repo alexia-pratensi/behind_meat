@@ -13,9 +13,9 @@ class DaysController < ApplicationController
 
     # Consommation de boeuf
 
-    @boeuf_total_conso = Conso.where(meat_id: Meat.find_by_meat_type('boeuf').id).where(day_id: @day.id).pluck(:quantity).sum
+    @beef_total_conso = Conso.where(meat_id: Meat.find_by_meat_type('boeuf').id).where(day_id: @day.id).pluck(:quantity).sum
     @day_total_conso = @day.consos.pluck(:quantity).sum
-    @boeuf_percent = (@boeuf_total_conso.to_f / @day_total_conso.to_f * 100).round(2)
+    @beef_percent = (@beef_total_conso.to_f / @day_total_conso.to_f * 100).round(2)
 
     # Consommation de poulet
 
