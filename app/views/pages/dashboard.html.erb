@@ -88,46 +88,39 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
     <% end %>
 
 
-    <!-- Compteur animaux tués-->
-
-              <div class='card compteur-dashboard'>
-                <div class='compteur-card-content'>
-                  <div class='compteur-card-text'>
-
-                    <div class="compteur-animals">
-                      <h4 class="compteur-title">Animaux tués dans le monde depuis votre arrivée sur le site...</h4>
-                      <p class="chiffres">
-                      🐟 <span id="count0">0</span>&nbsp;animaux marins <br />
-                      🐓 <span id="count1">0</span>&nbsp;poulets <br />
-                      🦆 <span id="count2">0</span>&nbsp;canards <br />
-                      🐖 <span id="count3">0</span>&nbsp;porcs <br />
-                      🦃 <span id="count4">0</span>&nbsp;dindes <br />
-                      🦆 <span id="count5">0</span>&nbsp;oies <br />
-                      🐑 <span id="count6">0</span>&nbsp;moutons <br />
-                      🐄 <span id="count7">0</span>&nbsp;vaches et veaux <br /><br>
-                      <i>Source adaptt.org</i>
-                      </p>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-
       </div>
     </div>
   </div>
 
-<!-- Le saviez-vous? -->
-<div class='card card-dashboard'>
-            <div class='dash-card-content'>
-              <div class='dash-card-text'>
-                <p class='titre'><b>Le saviez-vous?</b></p>
-                <p><%= @saviez_vous %></p>
-              </div>
-            </div>
-          </div>
 
+ <!-- Compteur animaux tués-->
+<div class="counter-saviez">
+  <div class='card compteur-dashboard'>
+    <div class='compteur-card-content'>
+      <div class='compteur-card-text'>
+        <div class="compteur-animals">
+          <h4 class="compteur-title">Animaux tués dans le monde depuis votre arrivée sur le site...</h4>
+          <p class="chiffres">
+          🐟 <span id="count0">0</span>&nbsp;animaux marins <br />
+          🐓 <span id="count1">0</span>&nbsp;poulets <br />
+          🦆 <span id="count2">0</span>&nbsp;canards <br />
+          🐖 <span id="count3">0</span>&nbsp;porcs <br />
+          🦃 <span id="count4">0</span>&nbsp;dindes <br />
+          🦆 <span id="count5">0</span>&nbsp;oies <br />
+          🐑 <span id="count6">0</span>&nbsp;moutons <br />
+          🐄 <span id="count7">0</span>&nbsp;vaches et veaux <br /><br>
+          <i>Source adaptt.org</i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Le saviez-vous? -->
+  <div class='card div-saviez-vous'>
+    <p class='titre'>💡Le saviez-vous ? 💡</p>
+    <p><%= @saviez_vous %></p>
+  </div>
+</div>
 
 <!-- APIs -->
 
