@@ -42,7 +42,60 @@ class PagesController < ApplicationController
     @user_total_conso = @consos.pluck(:quantity).sum
     @fish_percent = (@fish_total_conso.to_f / @user_total_conso.to_f * 100).round(2)
 
+    # Cards
+
+    @water_impact_dashboard = water_impact_calculator
+    @carbon_impact_dashboard = carbon_impact_calculator
+    @tree_impact_dashboard = tree_impact_calculator
+    @pollution_impact_dashboard = pollution_impact_calculator
+
+    # Le Savez-Vous ?
+
     @saviez_vous = text_saviez_vous.sample
+  end
+
+  private
+
+    # Algorithme Cards
+
+  def water_impact_calculator
+    water_impact_dashboard = 0
+    @consos.each do |conso|
+      # conso.meat.water_impact
+      # conso.quantity
+      water_impact_dashboard += (conso.quantity * conso.meat.water_impact) / 1000
+    end
+    return water_impact_dashboard.round(2)
+  end
+
+  def carbon_impact_calculator
+    carbon_impact_dashboard = 0
+    @consos.each do |conso|
+      # conso.meat.carbon_impact
+      # conso.quantity
+      carbon_impact_dashboard += (conso.quantity * conso.meat.carbon_impact) / 1000
+    end
+    return carbon_impact_dashboard.round(2)
+  end
+
+  def tree_impact_calculator
+    tree_impact_dashboard = 0
+    @consos.each do |conso|
+      # conso.meat.tree_impact
+      # conso.quantity
+      tree_impact_dashboard += (conso.quantity * conso.meat.tree_impact) / 1000
+    end
+    return tree_impact_dashboard.round(2)
+  end
+
+  def pollution_impact_calculator
+    pollution_impact_dashboard = 0
+    @consos.each do |conso|
+      # conso.meat.pollution_impact
+      # conso.quantity
+      pollution_impact_dashboard += (conso.quantity * conso.meat.pollution_impact) / 1000
+    end
+    return pollution_impact_dashboard.round(2)
   end
 
   def text_saviez_vous
