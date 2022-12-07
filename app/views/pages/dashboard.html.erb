@@ -86,6 +86,8 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
       </div>
     <% end %>
     <% end %>
+
+
     <!-- Compteur animaux tués-->
 
               <div class='card compteur-dashboard'>
@@ -117,6 +119,16 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
     </div>
   </div>
 
+<!-- Le saviez-vous? -->
+<div class='card card-dashboard'>
+            <div class='dash-card-content'>
+              <div class='dash-card-text'>
+                <p class='titre'><b>Le saviez-vous?</b></p>
+                <p><%= @saviez_vous %></p>
+              </div>
+            </div>
+          </div>
+
 
 <!-- APIs -->
 
@@ -133,7 +145,10 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
       <div class='api-title'>
       <h3 class='dashboard-tweets'>Ceci pourrait vous intéresser</h3>
         <h4>API Twitter</h4>
-        <h5>Prochainement...</h5>
+        <%# <h5>Prochainement...</h5> %>
+
+        <a class="twitter-timeline" href="https://twitter.com/BehindMeatinfo?ref_src=twsrc%5Etfw">Tweets by BehindMeatinfo</a>
+
       </div>
     </div>
   </div>
@@ -164,3 +179,4 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
     <%# <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script> %>
 
 <%# Compteur animaux  %>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
