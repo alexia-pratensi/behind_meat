@@ -5,17 +5,18 @@
     "@hotwired/stimulus": "^3.1.1",
     "@hotwired/turbo-rails": "^7.2.4",
     "@popperjs/core": "^2.11.6",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "5.4.3",
     "axios": "^1.2.0",
     "bootstrap": "^5.2.3",
     "chart.js": "^4.0.1",
     "flatpickr": "^4.6.13",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.0",
+    "marmiton-api": "^2.3.0",
     "turbolinks": "^5.2.0",
-    "@rails/actioncable": "^6.0.0",
-    "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "5.4.3"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
