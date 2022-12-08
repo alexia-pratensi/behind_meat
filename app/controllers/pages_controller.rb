@@ -10,6 +10,7 @@ class PagesController < ApplicationController
     @days = Day.where(user_id: current_user.id)
     @seven_days = @days.last(7)
     @last_day = @days.last
+    # @day = Day.find(params[:id])
 
     # Consommation de boeuf
     # @days.where(user.id == current_user.id)
