@@ -131,10 +131,10 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
         <h3 class='dashboard-recettes'>Idées recettes</h3>
     <div class='recettes-api'>
       <p>blabla</p>
-      <%# <%= @recipe_api[:title] %>
-      <%# <%= @recipe_api[:image] %>
-      <%# <%= @recipe_api[:summary] %>
-      <%# <%= @recipe_api[:url] %>
+      <%= @recipe_api[:title] %>
+      <img src="<%= @recipe_api[:image] %>" alt="image recette">
+      <%= sanitize @recipe_api[:summary] %>
+      <%= link_to 'Découvrir la recette', @recipe_api[:url], target: '_blank' %>
     </div>
     </div>
     </div>
