@@ -9,11 +9,11 @@
 <div class='recap-conso'>
   <div class='day-conso'>
     <h2 class='title-conso'>Ma consommation générale</h2>
-    <%# <% if @consos.pluck(:quantity) == 0 %>
-      <%# <p>Félicitation! 👏 <br>Tu n'as pas consommé de viande aujourd'hui </p> %>
-    <%# <%else%>
+    <% if @consos.pluck(:quantity).sum == 0 %>
+      <p class='felicitations'>Félicitations ! Tu n'as pas consommé de viande aujourd'hui. 👏</p>
+    <%else %>
       <canvas id="myChart" data-controller="donut" data-beef=<%= @beef_percent %> data-chicken=<%= @chicken_percent %> data-pork=<%= @pork_percent %> data-sheep=<%= @sheep_percent %> data-fish=<%= @fish_percent %>></canvas>
-    <%# <%end%>
+    <% end %>
   </div>
 
   <div class='dashboard-row'>
@@ -107,14 +107,14 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
         <div class="compteur-animals">
           <h4 class="compteur-title">Animaux abattus dans le monde depuis votre arrivée sur cette page</h4>
           <p class="chiffres">
-          🐟 <span id="count0">0</span>&nbsp;animaux marins <br />
-          🐓 <span id="count1">0</span>&nbsp;poulets <br />
-          🦆 <span id="count2">0</span>&nbsp;canards <br />
-          🐖 <span id="count3">0</span>&nbsp;porcs <br />
-          🦃 <span id="count4">0</span>&nbsp;dindes <br />
-          🦆 <span id="count5">0</span>&nbsp;oies <br />
-          🐑 <span id="count6">0</span>&nbsp;moutons <br />
-          🐄 <span id="count7">0</span>&nbsp;vaches et veaux <br />
+          🐟 <b><span id="count0">0</span></b>&nbsp;animaux marins <br />
+          🐓 <b><span id="count1">0</span></b>&nbsp;poulets <br />
+          🦆 <b><span id="count2">0</span></b>&nbsp;canards <br />
+          🐖 <b><span id="count3">0</span></b>&nbsp;porcs <br />
+          🦃 <b><span id="count4">0</span></b>&nbsp;dindes <br />
+          🦆 <b><span id="count5">0</span></b>&nbsp;oies <br />
+          🐑 <b><span id="count6">0</span></b>&nbsp;moutons <br />
+          🐄 <b><span id="count7">0</span></b>&nbsp;vaches et veaux <br />
           <i>Source adaptt.org</i>
           </p>
         </div>
