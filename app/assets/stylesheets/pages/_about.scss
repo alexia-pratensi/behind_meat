@@ -6,7 +6,6 @@
   background-size: cover;
   background-position: center;
   // padding: 70px 0;
-  // background-image: url('https://res.cloudinary.com/dwvsbgwap/image/upload/v1670413616/phototeam_ongvde.png');
   // height: 405px;
   // margin-top: 100px;
   border: 1px solid #C65759;
@@ -29,6 +28,16 @@ h1 {
 p{
   color: #362828;
 }
+.nous {
+  display: flex;
+  justify-content: space-evenly;
+  #mel {
+    margin-left: 100px;
+  }
+  #alex {
+    margin-right: 100px;
+  }
+}
 }
 
 .about-qui {
@@ -46,6 +55,7 @@ p{
   margin-bottom: 50px;
   text-align: right;
   text-justify: right;
+  margin-top: 50px;
 }
 
 .about-sources {
