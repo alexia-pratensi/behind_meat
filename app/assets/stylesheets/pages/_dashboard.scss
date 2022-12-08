@@ -399,5 +399,14 @@
   }
 }
 .compteur-animals {
-  padding:30px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: large;
+  .compteur-title {
+    color: #C65759;
+  }
+  i {
+    font-size: small;
+    text-align: right;
+  }
 }
