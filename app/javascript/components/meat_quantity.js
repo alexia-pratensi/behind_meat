@@ -3,7 +3,6 @@ import axios from 'axios'
 export const meatQuantity = () => {
   let incrementBoeuf = document.getElementById("btn_increment_boeuf");
   if (incrementBoeuf) {
-    console.log('coucou');
 
     let decrementBoeuf = document.getElementById("btn_decrement_boeuf");
     let counterBoeuf = document.getElementById("quantity_boeuf");
@@ -17,7 +16,10 @@ export const meatQuantity = () => {
 
     decrementBoeuf.onclick = () => {
       const numBoeuf = parseInt(counterBoeuf.innerHTML);
-      counterBoeuf.innerHTML = numBoeuf - 50;
+      if (numBoeuf == 0) {
+        return
+       }
+        counterBoeuf.innerHTML = numBoeuf - 50;
     }
 
     //JS pour la card Porc
@@ -34,6 +36,9 @@ export const meatQuantity = () => {
 
     decrementPorc.onclick = () => {
       const numPorc = parseInt(counterPorc.innerHTML);
+      if (numPorc == 0) {
+        return
+       }
       counterPorc.innerHTML = numPorc - 50;
     }
 
@@ -51,6 +56,9 @@ export const meatQuantity = () => {
 
   decrementPoulet.onclick = () => {
     const numPoulet = parseInt(counterPoulet.innerHTML);
+    if (numPoulet == 0) {
+      return
+     }
     counterPoulet.innerHTML = numPoulet - 50;
   }
 
@@ -69,6 +77,9 @@ export const meatQuantity = () => {
 
   decrementMouton.onclick = () => {
     const numMouton = parseInt(counterMouton.innerHTML);
+    if (numMouton == 0) {
+      return
+     }
     counterMouton.innerHTML = numMouton - 50;
   }
 
@@ -86,6 +97,9 @@ export const meatQuantity = () => {
 
     decrementPoisson .onclick = () => {
       const numPoisson  = parseInt(counterPoisson.innerHTML);
+      if (numPoisson == 0) {
+        return
+       }
       counterPoisson.innerHTML = numPoisson  - 50;
     }
 
