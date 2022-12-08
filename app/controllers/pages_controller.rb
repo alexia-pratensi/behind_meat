@@ -50,6 +50,46 @@ class PagesController < ApplicationController
     @pollution_impact_dashboard = pollution_impact_calculator
 
 
+
+
+    # API
+    # def import
+
+    # require "open-uri"
+    # require "nokogiri"
+
+    # url = "https://freethepickle.fr/?s=végétarien"
+
+    # html_file = URI.open(url).read
+    # html_doc = Nokogiri::HTML(html_file)
+
+    # html_doc.search(".standard-card-new__article-title").each do |element|
+    #   puts element.text.strip
+    #   puts element.attribute("href").value
+    # end
+  # end
+
+  # def import
+
+  #   url = "https://freethepickle.fr/?s=végétarien"
+
+  #   html_file = URI.open(url).read
+  #   html_doc = Nokogiri::HTML(html_file)
+
+  #   recipes = []
+
+  #   html_doc.search(".entry-content").first(5).each do |element|
+  #     path = element.search(".img-responsive wp-post-image jetpack-lazy-image jetpack-lazy-image--handled").attribute("href").value
+  #     name = nil
+  #     description = nil
+  #     html_doc2.search("h1").each { |titre| name = titre.text.strip }
+  #     html_doc2.search(".editor-content.mt-sm.pr-xxs.hidden-print").each do |paragraph|
+  #       description = paragraph.text.strip
+  #     end
+  #     recipes << Recipe.new(name, description)
+  #   end
+  # end
+
   end
 
   private
