@@ -9,8 +9,11 @@
 <div class='recap-conso'>
   <div class='day-conso'>
     <h2 class='title-conso'>Ma consommation générale</h2>
-
-    <canvas id="myChart" data-controller="donut" data-beef=<%= @beef_percent %> data-chicken=<%= @chicken_percent %> data-pork=<%= @pork_percent %> data-sheep=<%= @sheep_percent %> data-fish=<%= @fish_percent %>></canvas>
+    <%# <% if @consos.pluck(:quantity) == 0 %>
+      <%# <p>Félicitation! 👏 <br>Tu n'as pas consommé de viande aujourd'hui </p> %>
+    <%# <%else%>
+      <canvas id="myChart" data-controller="donut" data-beef=<%= @beef_percent %> data-chicken=<%= @chicken_percent %> data-pork=<%= @pork_percent %> data-sheep=<%= @sheep_percent %> data-fish=<%= @fish_percent %>></canvas>
+    <%# <%end%>
   </div>
 
   <div class='dashboard-row'>
