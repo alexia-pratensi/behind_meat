@@ -90,6 +90,12 @@
             align-items: center;
             justify-content: center;
           }
+          .chiffre-carbon {
+            margin-left: 20px;
+          }
+          .chiffre-water {
+            margin-left: 15px;
+          }
         }
       }
     }
@@ -118,7 +124,6 @@
         // }
         .compteur-card-content{
           display:flex;
-
 
           .compteur-card-text {
             padding: 2%;
@@ -305,12 +310,12 @@
       }
 
       .btn-dashboard-pink {
-        margin-top: 20px;
+        // margin-top: 20px;
         width: 120px;
-        height: 40px;
+        height: 35px;
         text-decoration: none;
-        margin-left: 50%;
-        margin-bottom: 10px;
+        // margin-left: 35%;
+        // margin-bottom: 10px;
       }
       .image-container-asso {
         display: flex;
@@ -346,6 +351,7 @@
     box-shadow: none;
     width: 800px;
     margin-left:110px;
+    font-size: large;
 
 
     .titre  {
