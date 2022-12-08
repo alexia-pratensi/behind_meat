@@ -51,63 +51,10 @@ class PagesController < ApplicationController
 
     # API
 
-  # require "json"
-  # require "open-uri"
-
-  # url = "https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&number=25&apiKey=40dc8421c5b54e84bbfbdea1ab9fc773&includeNutrition=true.&diet=vegetarian&addRecipeInformation=true"
-  # recipes_serialized = URI.open(url).read
-  # recipes = JSON.parse(recipes_serialized)
-
-  # recipe = recipes['results'].sample
-  # # image = recipe['image']
-
-  # @recipe_api = {
-  #   title: recipe['title'],
-  #   summary: recipe['summary'],
-  #   source_url: recipe['sourceUrl'],
-  #   image: recipe['image']
-  # }
-
-  # title =
-
-    # def import
-
-    # require "open-uri"
-    # require "nokogiri"
-
-    # url = "https://freethepickle.fr/?s=végétarien"
-
-    # html_file = URI.open(url).read
-    # html_doc = Nokogiri::HTML(html_file)
-
-    # html_doc.search(".standard-card-new__article-title").each do |element|
-    #   puts element.text.strip
-    #   puts element.attribute("href").value
-    # end
-  # end
-
-  # def import
-
-  #   url = "https://freethepickle.fr/?s=végétarien"
-
-  #   html_file = URI.open(url).read
-  #   html_doc = Nokogiri::HTML(html_file)
-
-  #   recipes = []
-
-  #   html_doc.search(".entry-content").first(5).each do |element|
-  #     path = element.search(".img-responsive wp-post-image jetpack-lazy-image jetpack-lazy-image--handled").attribute("href").value
-  #     name = nil
-  #     description = nil
-  #     html_doc2.search("h1").each { |titre| name = titre.text.strip }
-  #     html_doc2.search(".editor-content.mt-sm.pr-xxs.hidden-print").each do |paragraph|
-  #       description = paragraph.text.strip
-  #     end
-  #     recipes << Recipe.new(name, description)
-  #   end
-  # end
+    @recipe_api = import
 
   end
+
 
   private
 
@@ -153,5 +100,33 @@ class PagesController < ApplicationController
     return pollution_impact_dashboard.round(2)
   end
 
+  def import
+
+    require "json"
+
+    filepath = "app/data/response.json"
+
+    serialized_recipes = File.read(filepath)
+
+    recipes = JSON.parse(serialized_recipes)
+
+  # require "json"
+  # require "open-uri"
+
+  # url = "https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&number=25&apiKey=40dc8421c5b54e84bbfbdea1ab9fc773&includeNutrition=true.&diet=vegetarian&addRecipeInformation=true"
+  # recipes_serialized = URI.open(url).read
+  # recipes = JSON.parse(recipes_serialized)
+
+  recipe = recipes['results'].sample
+  # # image = recipe['image']
+
+  recipe_api = {
+    title: recipe['title'],
+    summary: recipe['summary'],
+    url: recipe['sourceUrl'],
+    image: recipe['image']
+  }
+
+  end
 
 end
