@@ -11,11 +11,6 @@
     <h2 class='title-conso'>Ma consommation générale</h2>
 
     <canvas id="myChart" data-controller="donut" data-beef=<%= @beef_percent %> data-chicken=<%= @chicken_percent %> data-pork=<%= @pork_percent %> data-sheep=<%= @sheep_percent %> data-fish=<%= @fish_percent %>></canvas>
-
-    <div class='dashboard-buttons'>
-      <%= link_to "Modifier ma saisie", edit_day_path(@last_day.id), class: "white_button btn-dashboard-pink" %>
-      <a class="pink_button btn-dashboard-pink" href="/days/new">Ajouter une journée</a>
-    </div>
   </div>
 
   <div class='dashboard-row'>
@@ -90,9 +85,11 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
       </div>
     <% end %>
   <% end %>
-
-
-      </div>
+    <div class='dashboard-buttons'>
+    <%# <%= link_to "Modifier ma saisie", edit_day_path(@last_day.id), class: "white_button btn-dashboard-pink" %>
+    <a class="pink_button btn-dashboard-pink" href="/days/new">Ajouter une journée</a>
+    </div>
+    </div>
     </div>
   </div>
 
