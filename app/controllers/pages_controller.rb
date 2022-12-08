@@ -49,10 +49,27 @@ class PagesController < ApplicationController
     @tree_impact_dashboard = tree_impact_calculator
     @pollution_impact_dashboard = pollution_impact_calculator
 
-
-
-
     # API
+
+  # require "json"
+  # require "open-uri"
+
+  # url = "https://api.spoonacular.com/recipes/complexSearch?query=vegetarian&number=25&apiKey=40dc8421c5b54e84bbfbdea1ab9fc773&includeNutrition=true.&diet=vegetarian&addRecipeInformation=true"
+  # recipes_serialized = URI.open(url).read
+  # recipes = JSON.parse(recipes_serialized)
+
+  # recipe = recipes['results'].sample
+  # # image = recipe['image']
+
+  # @recipe_api = {
+  #   title: recipe['title'],
+  #   summary: recipe['summary'],
+  #   source_url: recipe['sourceUrl'],
+  #   image: recipe['image']
+  # }
+
+  # title =
+
     # def import
 
     # require "open-uri"
