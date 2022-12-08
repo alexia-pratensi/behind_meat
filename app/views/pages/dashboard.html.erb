@@ -21,7 +21,7 @@
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669805107/water_d8hj6l.png", width: 60, height: 60) %>
                 <p><b>Consommation d'eau douce</b></p>
-                <p class='resultat-chiffre'> <%= @water_impact_dashboard %> litres</p>
+                <div class="chiffre-water"><p class='resultat-chiffre'> <%= @water_impact_dashboard %> litres</p></div>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@ C'est à dire que les gaz autres que le CO2 sont mesurés par la quantité de re
               <div class='dash-card-text'>
                 <%= image_tag("https://res.cloudinary.com/dwvsbgwap/image/upload/v1669894851/nuage_i0fay8.png", class:'dashboard-pic', width: 60, height: 60 ) %>
                 <p class='titre'><b>Emission de gaz à effet de serre</b></p>
-                <p class='resultat-chiffre'> <%= @carbon_impact_dashboard %> CO2eq</p>
+                <div class="chiffre-carbon"><p class='resultat-chiffre'> <%= @carbon_impact_dashboard %> CO2eq</p></div>
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
     <div class='compteur-card-content'>
       <div class='compteur-card-text'>
         <div class="compteur-animals">
-          <h4 class="compteur-title">Animaux tués dans le monde depuis votre arrivée sur le site...</h4>
+          <h4 class="compteur-title">Animaux abattus dans le monde depuis votre arrivée sur cette page</h4>
           <p class="chiffres">
           🐟 <span id="count0">0</span>&nbsp;animaux marins <br />
           🐓 <span id="count1">0</span>&nbsp;poulets <br />
@@ -165,7 +165,9 @@ Elle est exprimée en gramme de phosphate équivalents (PO₄eq) pour un kilo de
               <h5 class="card-title"><%= asso.name%></h5>
               <p class="card-text"><%= asso.description%></p></div>
             </div>
+              <div class="d-flex justify-content-center align-items-center" >
               <a href="<%= asso.url%>" target="_blank" class="btn btn-dashboard-pink pink_button">Visiter le site</a>
+              </div>
             <%# <div class="card-body">
             </div> %>
         </div>
